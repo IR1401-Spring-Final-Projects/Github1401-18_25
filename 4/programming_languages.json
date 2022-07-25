@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Python",
+        "format": "py",
+        "crawl": false
+    },
+    {
+        "name": "JavaScript",
+        "format": "js",
+        "crawl": false
+    },
+    {
+        "name": "Java",
+        "format": "java",
+        "crawl": false
+    },
+    {
+        "name": "TypeScript",
+        "format": "ts",
+        "crawl": false
+    },
+    {
+        "name": "Go",
+        "format": "go",
+        "crawl": false
+    },
+    {
+        "name": "C",
+        "format": "c",
+        "crawl": false
+    },
+    {
+        "name": "Ruby",
+        "format": "rb",
+        "crawl": false
+    },
+    {
+        "name": "PHP",
+        "format": "php",
+        "crawl": false
+    },
+    {
+        "name": "C#",
+        "format": "cs",
+        "crawl": true
+    },
+    {
+        "name": "C++",
+        "format": "cpp",
+        "crawl": true
+    },
+    {
+        "name": "Shell",
+        "format": "sh",
+        "crawl": false
+    },
+    {
+        "name": "Kotlin",
+        "format": "kt",
+        "crawl": false
+    }
+]
