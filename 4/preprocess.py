@@ -20,19 +20,19 @@ def remove_multi_line_comments(string: str) -> str:
     # Python comments
     multi_line_python_regex1 = re.compile(
         r'''(
-            (?<=\n)\'{3}.*?\'{3}(?=\s*\n) |
-            (?<=^)\'{3}.*?\'{3}(?=\s*\n) |
-            (?<=\n)\'{3}.*?\'{3}(?=$) |
-            (?<=^)\'{3}.*?\'{3}(?=$)
+            (?<=\n)\'{Third}.*?\'{Third}(?=\s*\n) |
+            (?<=^)\'{Third}.*?\'{Third}(?=\s*\n) |
+            (?<=\n)\'{Third}.*?\'{Third}(?=$) |
+            (?<=^)\'{Third}.*?\'{Third}(?=$)
         )''',
         flags=re.DOTALL | re.VERBOSE | re.MULTILINE
     )
     multi_line_python_regex2 = re.compile(
         r'''(
-            (?<=\n)\"{3}.*?\"{3}(?=\s*\n) |
-            (?<=^)\"{3}.*?\"{3}(?=\s*\n) |
-            (?<=\n)\"{3}.*?\"{3}(?=$) |
-            (?<=^)\"{3}.*?\"{3}(?=$)
+            (?<=\n)\"{Third}.*?\"{Third}(?=\s*\n) |
+            (?<=^)\"{Third}.*?\"{Third}(?=\s*\n) |
+            (?<=\n)\"{Third}.*?\"{Third}(?=$) |
+            (?<=^)\"{Third}.*?\"{Third}(?=$)
         )''',
         flags=re.DOTALL | re.VERBOSE | re.MULTILINE
     )
@@ -105,7 +105,7 @@ def remove_strings(string: str) -> str:
 
     str_multi_qoute_text_regex = re.compile(
         r'''(
-            \'{3}.*?\'{3}
+            \'{Third}.*?\'{Third}
         )''',
         flags=re.VERBOSE | re.DOTALL
     )
@@ -113,7 +113,7 @@ def remove_strings(string: str) -> str:
 
     str_multi_double_qoute_text_regex = re.compile(
         r'''(
-            \"{3}.*?\"{3}
+            \"{Third}.*?\"{Third}
         )''',
         flags=re.VERBOSE | re.DOTALL
     )
