@@ -45,17 +45,45 @@ boolean_btn = Button(window, text = "Boolean", command=funcs.onclick_boolean()).
 #Query Expansion
 
 expansion_var = IntVar()
-model = boolean.BooleanRetrival(preprocess.tokens_df)
+expansion_btn = Checkbutton(window, text="Query Expansion", variable=expansion_var, onvalue=1, offvalue=0, height=1, width=15).place(x=350, y=300)
 
-def is_checked():
-    string = Take_input()
-    if expansion_var.get() == 1:
-        result = model.expand_query(string)
-        output.insert(END, result)
-    else:
-        result = model.process_query(string)
-        output.insert(END, result)
-expansion_btn = Checkbutton(window, text="Query Expansion", variable=expansion_var, onvalue=1, offvalue=0, height=1, width=15, command=is_checked()).place(x=350, y=300)
+model = boolean.BooleanRetrival(preprocess.tokens_df)
+string = Take_input()
+
+# def onclick_boolean():
+#     if expansion_var.get() == 1:
+#         result = model.expand_query(string)
+#         output.insert(END, result)
+#     else:
+#         result = model.process_query(string)
+#         output.insert(END, result)
+
+def onclick_tfidf():
+    pass
+
+
+def onclick_fasttext():
+    pass
+
+
+def onclick_transformer():
+    pass
+
+
+def onclick_elastic():
+    pass
+
+
+def onclick_pagerank():
+    pass
+
+
+def onclick_classification():
+    pass
+
+
+def onclick_clustering():
+    pass
 
 # output.pack()
 mainloop()
