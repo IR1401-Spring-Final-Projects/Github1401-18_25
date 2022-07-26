@@ -1,4 +1,11 @@
 from tkinter import *
+from tkinter import messagebox
+
+from funcs import *
+from tkinter.messagebox import showinfo
+import tk
+
+import funcs
 
 window = Tk()
 window.title("Advanced Information Retrieval Project")
@@ -22,25 +29,36 @@ input.place(x=350, y=100)
 
 #Buttons
 
-boolean_btn = Button(window, text = "Boolean")
+boolean_btn = Button(window, text = "Boolean", command=funcs.onclick_boolean())
 boolean_btn.place(x=350, y=300)
 
-tfidf_btn = Button(window, text = "Tf-Idf")
+tfidf_btn = Button(window, text = "Tf-Idf", command=funcs.onclick_tfidf())
 tfidf_btn.place(x=410, y=300)
 
-fasttext_btn = Button(window, text = "Fasttext")
+fasttext_btn = Button(window, text = "Fasttext", command=funcs.onclick_fasttext())
 fasttext_btn.place(x=455, y=300)
 
-transformer_btn = Button(window, text = "Transformer")
+transformer_btn = Button(window, text = "Transformer", command=funcs.onclick_transformer())
 transformer_btn.place(x=510, y=300)
 
-elastic_btn = Button(window, text = "Elastic search")
+elastic_btn = Button(window, text = "Elastic search", command=funcs.onclick_elastic())
 elastic_btn.place(x=590, y=300)
+
+pagerank_btn = Button(window, text = "Page Rank", command=funcs.onclick_pagerank())
+pagerank_btn.place(x=675, y=300)
+
+classification_btn = Button(window, text = "Classification", command=funcs.onclick_classification())
+classification_btn.place(x=350, y=350)
+
+clustering_btn = Button(window, text = "Clustering", command=funcs.onclick_clustering())
+clustering_btn.place(x=435, y=350)
 
 #Query Expansion
 expansion_var = IntVar()
-expansion_btn = Checkbutton(window, text="Query Expansion", variable=expansion_var, onvalue=1, offvalue=0, height=1, width=15)
+
+expansion_btn = Checkbutton(window, text="Query Expansion", variable=expansion_var, onvalue=1, offvalue=0, height=1, width=15, command=funcs.is_checked())
 expansion_btn.place(x=350, y=250)
+
 
 # output.pack()
 mainloop()
