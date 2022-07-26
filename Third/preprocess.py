@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 import nltk
 import string
@@ -137,7 +138,7 @@ class Preprocess:
                 preprocessed_paragraphs.append(self.preprocess(paragraph, lemmatize=False, remove_stopword=False, token=False))
             docs.append({'url': row['url'], 'text': preprocessed_paragraphs})
         Path('string.json').write_text(json.dumps(docs))
-        
-readmes_df = pd.read_json('./Third/readmes.json', orient= 'records')
-tokens_df = pd.read_json('./Third/token.json', orient= 'records')
-paragraph_df = pd.read_json('./Third/string.json', orient='records')
+
+readmes_df = pd.read_json('..\\Third\\readmes.json', orient= 'records')
+tokens_df = pd.read_json('..\\Third\\token.json', orient= 'records')
+paragraph_df = pd.read_json('..\\Third\\string.json', orient='records')
