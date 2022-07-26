@@ -1,7 +1,5 @@
 import os
 from tkinter import *
-
-import funcs
 from Third import preprocess
 from Third import boolean
 
@@ -21,27 +19,34 @@ input_label = Label(text = "Enter an input:").place(x = 350, y = 120)
 input = Text(window, height = 8, width = 60, bg = "gray").place(x=350, y=150)
 output = Text(window, height=8, width=60, bg="white").place(x=350, y=400)
 
-string = input.get("1.0",'end-1c')
+
+def get_input():
+    global input
+    string = input.get()
+    return string
 
 expansion_var = IntVar()
 expansion_btn = Checkbutton(window, text="Query Expansion", variable=expansion_var, onvalue=1, offvalue=0, height=1, width=15).place(x=350, y=300)
 model = boolean.BooleanRetrival(preprocess.tokens_df)
 
 def onclick_boolean():
-    if expansion_var.get() == 1:
-        result = model.expand_query(string)
-        output.insert(END, result)
-    else:
-        result = model.process_query(string)
-        output.insert(END, result)
+    if expansion_var.get() == 0:
+        result = model.expand_query(get_input())
+        # output.insert(END, result)
+    # else:
+    #     result = model.process_query(get_input())
+    #     # output.insert(END, result)
+    #     print("sth")
 
-def onclick_tfidf():
-    if expansion_var.get() == 1:
-        result = model.print_results(query = string, expand = True)
-        output.insert(END, result)
-    else:
-        result = model.print_results(query = string)
-        output.insert(END, result)
+boolean_btn = Button(window, text = "Boolean", command=onclick_boolean).place(x=350, y=350)
+
+# def onclick_tfidf():
+#     if expansion_var.get() == 1:
+#         result = model.print_results(query = string, expand = True)
+#         output.insert(END, result)
+#     else:
+#         result = model.print_results(query = string)
+#         output.insert(END, result)
 
 
 # def onclick_fasttext():
@@ -72,9 +77,6 @@ def onclick_classification():
 def onclick_clustering():
     pass
 
-
-boolean_btn = Button(window, text = "Boolean", command=onclick_boolean()).place(x=350, y=350)
-
 # tfidf_btn = Button(window, text = "Tf-Idf", command=funcs.onclick_tfidf()).place(x=410, y=350)
 #
 # fasttext_btn = Button(window, text = "Fasttext", command=funcs.onclick_fasttext()).place(x=455, y=350)
@@ -89,5 +91,4 @@ boolean_btn = Button(window, text = "Boolean", command=onclick_boolean()).place(
 #
 # clustering_btn = Button(window, text = "Clustering", command=funcs.onclick_clustering()).place(x=435, y=400)
 
-# output.pack()
 mainloop()
