@@ -1,5 +1,3 @@
-import main
-
 def onclick_boolean():
     print("sth")
 
@@ -23,10 +21,3 @@ def onclick_classification():
 
 def onclick_clustering():
     pass
-
-def is_checked():
-    if main.expansion_var.get() == 1:
-        #using query expansion
-        pass
-    else:
-        pass

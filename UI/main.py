@@ -1,10 +1,4 @@
 from tkinter import *
-from tkinter import messagebox
-
-from funcs import *
-from tkinter.messagebox import showinfo
-import tk
-
 import funcs
 
 window = Tk()
@@ -54,9 +48,15 @@ clustering_btn = Button(window, text = "Clustering", command=funcs.onclick_clust
 clustering_btn.place(x=435, y=350)
 
 #Query Expansion
-expansion_var = IntVar()
 
-expansion_btn = Checkbutton(window, text="Query Expansion", variable=expansion_var, onvalue=1, offvalue=0, height=1, width=15, command=funcs.is_checked())
+expansion_var = IntVar()
+def is_checked():
+    if expansion_var.get() == 1:
+        #using query expansion
+        pass
+    else:
+        pass
+expansion_btn = Checkbutton(window, text="Query Expansion", variable=expansion_var, onvalue=1, offvalue=0, height=1, width=15, command=is_checked())
 expansion_btn.place(x=350, y=250)
 
 
