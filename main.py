@@ -16,13 +16,15 @@ canvas1.create_image(0, 0, image=bg, anchor="nw")
 
 #Search Box
 input_label = Label(text = "Enter an input:").place(x = 350, y = 120)
-input = Text(window, height = 8, width = 60, bg = "gray").place(x=350, y=150)
-output = Text(window, height=8, width=60, bg="white").place(x=350, y=400)
+input = Text(window, height = 8, width = 60, bg = "gray")
+input.place(x=350, y=150)
+output = Text(window, height=8, width=60, bg="white")
+output.place(x=350, y=400)
 
 
 def get_input():
     global input
-    string = input.get()
+    string = input.get(1.0, "end-1c")
     return string
 
 expansion_var = IntVar()
@@ -30,13 +32,12 @@ expansion_btn = Checkbutton(window, text="Query Expansion", variable=expansion_v
 model = boolean.BooleanRetrival(preprocess.tokens_df)
 
 def onclick_boolean():
-    if expansion_var.get() == 0:
+    if expansion_var.get() == 1:
         result = model.expand_query(get_input())
-        # output.insert(END, result)
-    # else:
-    #     result = model.process_query(get_input())
-    #     # output.insert(END, result)
-    #     print("sth")
+        output.insert(END, result)
+    else:
+        result = model.process_query(get_input())
+        output.insert(END, result)
 
 boolean_btn = Button(window, text = "Boolean", command=onclick_boolean).place(x=350, y=350)
 

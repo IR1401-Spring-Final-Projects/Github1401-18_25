@@ -13,7 +13,7 @@ import re
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
-nltk.download('omw-1.Fourth')
+nltk.download('omw-1.4')
 
 class Preprocess:
     
