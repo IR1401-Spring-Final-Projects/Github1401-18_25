@@ -1,3 +1,4 @@
 engines
 faiss-cpu
 sentence-transformers
+gensim
