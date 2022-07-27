@@ -1,0 +1,10 @@
+asgiref==3.5.2
+Django==4.0.6
+sqlparse==0.4.2
+engines
+faiss-cpu
+sentence-transformers
+gensim==3.8.3
+pandas
+elasticsearch
+elasticsearch_dsl

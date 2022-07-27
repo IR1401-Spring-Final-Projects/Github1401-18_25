@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coolest github search ever</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" style="display: inline-block;">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    {#query_search#}
+    <input class="myButton" type="submit" name="boolean" value="Boolean" />
+    <input class="myButton" type="submit" name="tfidf" value="Tf-Idf" />
+    <input class="myButton" type="submit" name="fasttext" value="Fasttext" />
+    <input class="myButton" type="submit" name="transformer" value="Transformer" />
+    <input class="myButton" type="submit" name="elasticsearch" value="Elasticsearch" />
+
+    {#clustring_classification#}
+    <input class="myButton" type="submit" name="clustering" value="Clustering" />
+    <input class="myButton" type="submit" name="classification" value="Classification" />
+
+</form>
+    <p> {{ result }} </p>
+</body>
+</html>
