@@ -1,9 +1,10 @@
 from django.views.generic import FormView
 
-from Fourth.cluster import load_object
-from Third import boolean, preprocess, fasttext, tfidf
+#from Fourth.cluster import load_object
+from Third import boolean, preprocess, fasttext, tfidf, bert
 from search_engine.forms import InputForm
 import Fourth
+
 
 
 class SearchEngine(FormView):
@@ -63,7 +64,6 @@ class SearchEngine(FormView):
 
     @staticmethod
     def transformer_retrieval(input, expansion):
-        return None
         t_model = bert.TransformerModel(preprocess.readmes_df, load_data=True)
         if expansion:
             return t_model.get_recommendation2(input, expand=True)
@@ -71,7 +71,6 @@ class SearchEngine(FormView):
 
     @staticmethod
     def elastic_retrieval(input):
-        return None
         from elasticsearch import Elasticsearch
         from elasticsearch_dsl import Q, Search
         result = []

@@ -139,6 +139,7 @@ class Preprocess:
             docs.append({'url': row['url'], 'text': preprocessed_paragraphs})
         Path('string.json').write_text(json.dumps(docs))
 
-readmes_df = pd.read_json('./Third/readmes.json', orient= 'records')
-tokens_df = pd.read_json('./Third/token.json', orient= 'records')
-paragraph_df = pd.read_json('./Third/string.json', orient='records')
+print(os.getcwd())
+readmes_df = pd.read_json('MIRcopy\\Third\\readmes.json', orient= 'records')
+tokens_df = pd.read_json('MIRcopy\\Third\\token.json', orient= 'records')
+paragraph_df = pd.read_json('MIRcopy\\Third\\string.json', orient='records')
