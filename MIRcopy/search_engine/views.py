@@ -1,7 +1,7 @@
 from django.views.generic import FormView
 
 from Fourth.cluster import load_object
-from Third import boolean, preprocess, fasttext, tfidf, bert
+from Third import boolean, preprocess, fasttext, tfidf
 from search_engine.forms import InputForm
 import Fourth
 
@@ -12,7 +12,7 @@ class SearchEngine(FormView):
 
     def form_valid(self, form):
         input = form.cleaned_data.get('input')
-        expansion = self.request.POST['expansion'] == 'true'
+        expansion = 'expansion' in self.request.POST
         if 'boolean' in self.request.POST:
             result = self.boolean_retrieval(input, expansion)
         if 'tfidf' in self.request.POST:
@@ -42,6 +42,7 @@ class SearchEngine(FormView):
             result = model.expand_query(input)
         else:
             result = model.process_query(input)
+            result = [x['url'] for x in result]
         return result
 
     @staticmethod
@@ -62,6 +63,7 @@ class SearchEngine(FormView):
 
     @staticmethod
     def transformer_retrieval(input, expansion):
+        return None
         t_model = bert.TransformerModel(preprocess.readmes_df, load_data=True)
         if expansion:
             return t_model.get_recommendation2(input, expand=True)
@@ -69,6 +71,7 @@ class SearchEngine(FormView):
 
     @staticmethod
     def elastic_retrieval(input):
+        return None
         from elasticsearch import Elasticsearch
         from elasticsearch_dsl import Q, Search
         result = []

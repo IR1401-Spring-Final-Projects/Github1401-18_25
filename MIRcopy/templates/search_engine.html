@@ -21,6 +21,11 @@
     <input class="myButton" type="submit" name="classification" value="Classification" />
 
 </form>
-    <p> {{ result }} </p>
+<br><br>
+    {% for line in result  %}
+        <br>
+        <a href="{{ line }}">{{line}}</a>
+        <br>
+    {% endfor %}
 </body>
 </html>
