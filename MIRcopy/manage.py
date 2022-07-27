@@ -19,4 +19,6 @@ def main():
 
 
 if __name__ == '__main__':
+    from Fourth.cluster import Cluster
+    from Fourth.Classification import Classification
     main()

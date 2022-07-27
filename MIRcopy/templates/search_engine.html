@@ -22,10 +22,18 @@
 
 </form>
 <br><br>
+{% if type == 'third' %}
+
     {% for line in result  %}
         <br>
         <a href="{{ line }}">{{line}}</a>
         <br>
     {% endfor %}
+{% endif %}
+{% if type == 'forth' %}
+    <p>{{ result }}</p>
+
+{% endif %}
+
 </body>
 </html>

@@ -35,7 +35,7 @@ def purity_score(y_true, y_pred):
     return accuracy_score(y_true, y_voted_labels)
 
 
-class Cluster():
+class Cluster:
 
     def __init__(self, load=False):
         self.vectorizer = TfidfVectorizer(

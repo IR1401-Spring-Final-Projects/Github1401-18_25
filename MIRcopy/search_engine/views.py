@@ -5,6 +5,7 @@ from Third import boolean, preprocess, fasttext, tfidf, bert
 from search_engine.forms import InputForm
 import Fourth
 
+from Fourth.cluster import load_object, Cluster
 
 
 class SearchEngine(FormView):
@@ -14,24 +15,31 @@ class SearchEngine(FormView):
     def form_valid(self, form):
         input = form.cleaned_data.get('input')
         expansion = 'expansion' in self.request.POST
+        type = 'third'
         if 'boolean' in self.request.POST:
             result = self.boolean_retrieval(input, expansion)
-        if 'tfidf' in self.request.POST:
+        elif 'tfidf' in self.request.POST:
             result = self.tfidf_retrieval(input, expansion)
-        if 'fasttext' in self.request.POST:
+        elif 'fasttext' in self.request.POST:
             result = self.fasttext_retrieval(input, expansion)
-        if 'transformer' in self.request.POST:
+        elif 'transformer' in self.request.POST:
             result = self.transformer_retrieval(input, expansion)
-        if 'elasticsearch' in self.request.POST:
+        elif 'elasticsearch' in self.request.POST:
             result = self.elastic_retrieval(input)
+        else:
+            type = 'forth'
+            result = False
 
         if 'clustering' in self.request.POST:
             result = self.clustering(input)
+            result = "The input code belongs to cluster "+ str(result)
         if 'classification' in self.request.POST:
             result = self.classification(input)
+            result = 'The predicted language is ' + str(result)
 
         context = self.get_context_data()
         context['result'] = result
+        context['type'] = type
 
         return self.render_to_response(context)
 
@@ -84,7 +92,7 @@ class SearchEngine(FormView):
 
     @staticmethod
     def clustering(input):
-        cluster = load_object('.Fourth/Cluster.pkl')
+        cluster = load_object('MIRcopy\\Fourth\\Cluster.pkl')
 
         code = input
         code = [Fourth.preprocess.preprocess(code)]
@@ -93,4 +101,7 @@ class SearchEngine(FormView):
 
     @staticmethod
     def classification(input):
-        pass
+        cluster = load_object('MIRcopy\\Fourth\\Classification.pkl')
+        code = input
+        prediction = cluster.predict_code(code)
+        return prediction
