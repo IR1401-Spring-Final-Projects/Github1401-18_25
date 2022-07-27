@@ -123,13 +123,6 @@ def remove_strings(string: str) -> str:
 
 
 def extract_tokens(string: str) -> str:
-    # num_id_regex = re.compile(
-    #     r'''(
-    #         (?<=\W) |
-    #         (?=\W)
-    #     )''',
-    #     flags=re.VERBOSE
-    # )
     between_tokens_regex = re.compile(
         r'''(
             (?<=[\(\)\[\]\{\}\.;,]) |
@@ -184,10 +177,7 @@ def preprocess_repos():
         repo_path.mkdir()
 
         for file in repo["files_url"]:
-            # print(file)
             preprocess_file(last_repo_path, repo_path, file)
-            # break
-        # break
 
 
 def preprocess_file(last_repo_path, repo_path, file):
@@ -198,74 +188,15 @@ def preprocess_file(last_repo_path, repo_path, file):
 
     code_path = Path(
         str(language_path)) / f'{file["name"]}.txt'
-    # print(code_path)
     last_code_path = Path(str(last_repo_path)) / \
         file["language"] / f'{file["name"]}.txt'
     if not last_code_path.exists():
         return
-    # print(last_code_path)
     code = last_code_path.read_text()
     preprocessed_code = preprocess(code)
     code_path.write_text(preprocessed_code)
 
 
-string = '''/* first
-second
-third */
-ali ajsjnajsn
-/* first C comment
-second C comment
-third C comment */
-\'\'\'first quote comment
-second quote comment
-third quote comment
-\'\'\'
-a = ali
-\'\'\'first quote comment
-second quote comment
-third quote comment
-\'\'\'
-
-\"\"\"
-first double quote line of the comment
-second double quote line of the commet
-\"\"\"
-/* first C comment
-second C comment
-third C comment */
-=begin
-jsjdisjdij =begin
-skndksdknsd =end
-skndksndk
-=end
-
-'''
-
-
-inline_str = '''
-jsjansj = ajnsjan #habsajsasa
-# hbshabshb aknsjnas
-//ksjnjasjna
-nkans = asajsn
-'''
-
 if __name__ == '__main__':
     path = Path('preprocessed_data')
     preprocess_repos()
-
-    # t = Path(
-    #     'cmd.kubectx.fzf.go.txt')
-    # path = Path(
-    #     '/Users/amireza/Desktop/term 6/MIR/Assignments/4/4/data/ahmetb_kubectx/Go') / t
-
-    # string = '''API = {
-    # 'events': 'https://api.github.com/users/{username}/received_events'.format(username=ACCOUNT['username'])
-    # }'''
-    # print(preprocess(string))
-
-    # t = Path(
-    #     'script.github_bot.github_bot.py.txt')
-    # path = Path('koft1.txt')
-    # string = path.read_text()
-    # x = preprocess(string)
-    # Path('koft.txt').write_text(x)
