@@ -1,7 +1,12 @@
 import os
 from tkinter import *
+from tkHyperLinkManager import HyperlinkManager
+
 from Third import preprocess
 from Third import boolean
+from functools import partial
+import webbrowser
+
 
 window = Tk()
 window.title("Advanced Information Retrieval Project")
@@ -34,10 +39,19 @@ model = boolean.BooleanRetrival(preprocess.tokens_df)
 def onclick_boolean():
     if expansion_var.get() == 1:
         result = model.expand_query(get_input())
-        output.insert(END, result)
     else:
         result = model.process_query(get_input())
-        output.insert(END, result)
+
+        result = [x['url'] for x in result]
+    output.delete("1.0", "end")
+    output.insert(END, "Results:\n ")
+    hyperlink = HyperlinkManager(output)
+    for i in range(len(result)):
+        output.insert(END, f'{i+1}. ')
+        output.insert(END,
+                result[i], hyperlink.add(partial(webbrowser.open, result[i])))
+        output.insert(END, '\n')
+
 
 boolean_btn = Button(window, text = "Boolean", command=onclick_boolean).place(x=350, y=350)
 

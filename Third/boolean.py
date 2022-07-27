@@ -66,6 +66,8 @@ class BooleanRetrival:
             i += 2
         res = []
         for i in result:
+            if len(res) == self.k:
+                break
             res.append({'score':1.0, 'url': i})
         if query_expansion:
             return result
@@ -86,7 +88,7 @@ class BooleanRetrival:
             return result - second_list
 
     def expand_query(self, query):
-        ft_model = FastText.load('_fasttext.model')
+        ft_model = FastText.load('Third\\_fasttext.model')
         query = self.tokenize_query(query)
         all_queries = [query]
         for i in range(5):
@@ -102,7 +104,7 @@ class BooleanRetrival:
         res = set()
         for query in all_queries:
             res.update(self.process_query(query, True))
-        return res
+        return list(res)[0:self.k]
             
 
 

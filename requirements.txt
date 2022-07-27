@@ -1,4 +1,4 @@
 engines
 faiss-cpu
 sentence-transformers
-gensim
+gensim == 3.8.3
