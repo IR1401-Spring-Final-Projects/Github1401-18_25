@@ -9,12 +9,20 @@ First of all, for installing requirements run the command below.
 pip install -r requirements.txt
 ```
 
-After that, you have to download fasttext model from this [link](https://drive.google.com/file/d/1pZGpzhVsPcWu4kkp2Yb5ISFYBKcyeIFo/view?usp=sharing) and unzip the downloaded file. Afterward, put the three unzipped files under the "Third" folder inside the root directory. Afterward you have to download transformer model from this [link](https://drive.google.com/file/d/1fGo_bvNLr372ikDtUNh9MJwf3NWWweUX/view?usp=sharing) and unzip the downloaded file. Afterward, put the unzipped file under the "Fourth" folder inside the root directory. 
-Then run the main.py file under the root of the project. The GUI will be opened after a few seconds. 
+After that, you have to download fasttext model from this [link](https://drive.google.com/file/d/1pZGpzhVsPcWu4kkp2Yb5ISFYBKcyeIFo/view?usp=sharing) and unzip the downloaded file. Afterward, put the three unzipped files under the "Third" folder inside the MIR directory. Afterward you have to download transformer model from this [link](https://drive.google.com/file/d/1fGo_bvNLr372ikDtUNh9MJwf3NWWweUX/view?usp=sharing) and unzip the downloaded file. Put the unzipped file under the "Fourth" folder inside the MIR directory. 
+Finally, run the Django project. Change the directory by
+```
+cd MIR
+```
+Run the Django Server:
+```
+python manage.py runserver
+```
+The app can be reached by searching http://127.0.0.1:8000/search-engine in the browser. 
 
 
 ## Structure of the Project
-There have been 3 assignments that are merged in this project. The folder "Third", "Fourth", "Fifth" each contain the codes and notebooks for each assignments. The Report for each assignment is inside the notebook. 
+There have been 3 assignments that are merged in this project. The folder "Third", "Fourth", "Fifth", "project_elastic" inside MIR each contain the codes and notebooks for each assignments. The Report for each assignment is inside the notebook. 
 In the third assignment, four different Retrival methods are implemented. All of them contain Query Expansion(QE). 
 In the forth assginment, clustering and classification are implemented. 
 In the fifth assignment, link prediction is implemented. This assignment did not have any specific result, so it is not used in the UI. 
