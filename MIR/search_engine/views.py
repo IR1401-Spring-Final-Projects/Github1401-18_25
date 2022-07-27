@@ -32,7 +32,7 @@ class SearchEngine(FormView):
 
         if 'clustering' in self.request.POST:
             result = self.clustering(input)
-            result = "The input code belongs to cluster "+ str(result)
+            result = "The input code belongs to cluster " + str(result)
         if 'classification' in self.request.POST:
             result = self.classification(input)
             result = 'The predicted language is ' + str(result)
@@ -64,7 +64,8 @@ class SearchEngine(FormView):
 
     @staticmethod
     def fasttext_retrieval(input, expansion):
-        ft_model = fasttext.FastTextModel(preprocess.tokens_df, train=False, k=10)
+        ft_model = fasttext.FastTextModel(
+            preprocess.tokens_df, train=False, k=10)
         if expansion:
             return ft_model.search_query(input, expand=True)
         else:
@@ -92,7 +93,7 @@ class SearchEngine(FormView):
 
     @staticmethod
     def clustering(input):
-        cluster = load_object('MIRcopy\\Fourth\\Cluster.pkl')
+        cluster = load_object('Fourth/Cluster.pkl')
 
         code = input
         code = [Fourth.preprocess.preprocess(code)]
@@ -101,7 +102,7 @@ class SearchEngine(FormView):
 
     @staticmethod
     def classification(input):
-        cluster = load_object('MIRcopy\\Fourth\\Classification.pkl')
+        cluster = load_object('Fourth/Classification.pkl')
         code = input
         prediction = cluster.predict_code(code)
         return prediction
