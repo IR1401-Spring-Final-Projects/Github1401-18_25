@@ -2,21 +2,8 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 from sklearn.metrics import accuracy_score
-import pickle
-
+from Fourth.main import *
 from Fourth.preprocess import preprocess
-
-CLUSTER_PATH = 'Cluster.pkl'
-
-
-def save_object(obj, file_name):
-    with open(file_name, 'wb') as file:
-        pickle.dump(obj, file, pickle.HIGHEST_PROTOCOL)
-
-
-def load_object(file_name):
-    with open(file_name, 'rb') as file:
-        return pickle.load(file)
 
 
 def purity_score(y_true, y_pred):
@@ -49,12 +36,17 @@ class Cluster:
     def train(self, X_train, y_train):
         self.y_train = y_train
         self.doc_term_mat = self.vectorizer.fit_transform(X_train)
-        self.kmeans = KMeans(n_clusters=5, init='k-means++',
+        self.kmeans = KMeans(n_clusters=len(valid_languages), init='k-means++',
                              n_init=50, random_state=None).fit(self.doc_term_mat)
 
     def predict(self, X):
         vectorize_X = self.get_vectorized(X)
         return self.kmeans.predict(vectorize_X)
+
+    def predict_code(self, code):
+        preprocessed_code = [preprocess(code)]
+        index = self.predict(preprocessed_code)[0]
+        return index
 
     def get_purity_score(self, X=None, y=None, train=False):
         if train:
@@ -71,11 +63,7 @@ class Cluster:
 
 
 if __name__ == '__main__':
-    # valid_languages = ['Java', 'Python', 'Shell', 'C++', 'Go']
-
+    code = '''CODE'''
     cluster = load_object(CLUSTER_PATH)
-
-    code = ''''''
-    code = [preprocess(code)]
-    prediction = cluster.predict(code)[0]
-    print(prediction)
+    cluster_number = cluster.predict_code(code)
+    print(cluster_number)

@@ -50,7 +50,7 @@ class Classification:
 
 
 if __name__ == '__main__':
-    code = '''This is a Code'''
+    code = '''CODE'''
     classification = load_object(CLASSIFICATION_PATH)
 
     predicted_language = classification.predict_code(code)
