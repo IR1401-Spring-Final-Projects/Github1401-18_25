@@ -9,8 +9,9 @@ First of all, for installing requirements run the command below.
 pip install -r requirements.txt
 ```
 
-After that, you have to download fasttext model from this [link](https://drive.google.com/file/d/1pZGpzhVsPcWu4kkp2Yb5ISFYBKcyeIFo/view?usp=sharing) and unzip the downloaded file. Afterward, put the three unzipped files under the "Third" folder inside the root directory. 
+After that, you have to download fasttext model from this [link](https://drive.google.com/file/d/1pZGpzhVsPcWu4kkp2Yb5ISFYBKcyeIFo/view?usp=sharing) and unzip the downloaded file. Afterward, put the three unzipped files under the "Third" folder inside the root directory. Afterward you have to download transformer model from this [link](https://drive.google.com/file/d/1fGo_bvNLr372ikDtUNh9MJwf3NWWweUX/view?usp=sharing) and unzip the downloaded file. Afterward, put the unzipped file under the "Fourth" folder inside the root directory. 
 Then run the main.py file under the root of the project. The GUI will be opened after a few seconds. 
+
 
 ## Structure of the Project
 There have been 3 assignments that are merged in this project. The folder "Third", "Fourth", "Fifth" each contain the codes and notebooks for each assignments. The Report for each assignment is inside the notebook. 

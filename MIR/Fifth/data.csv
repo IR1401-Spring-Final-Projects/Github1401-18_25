@@ -1,0 +1,2700 @@
+url,topic,content
+https://github.com/encode/django-rest-framework,django,"# The base set of requirements for REST framework is actually
+# just Django, but for the purposes of development and testing
+# there are a number of packages that are useful to install.
+
+# Laying these out as separate requirements files, allows us to
+# only included the relevant sets when running tox, and ensures
+# we are only ever declaring our dependencies in one place.
+
+-r requirements/requirements-optionals.txt
+-r requirements/requirements-testing.txt
+-r requirements/requirements-documentation.txt
+-r requirements/requirements-packaging.txt
+"
+https://github.com/saleor/saleor,django,"adyen==4.0.0
+amqp==5.1.1; python_version >= ""3.7""
+aniso8601==7.0.0
+anyio==3.6.1; python_version >= ""3.7"" and python_full_version >= ""3.6.2""
+asgiref==3.5.2; python_version >= ""3.7""
+async-timeout==4.0.2; python_version >= ""3.7""
+authlib==1.0.1
+authorizenet==1.1.4
+azure-common==1.1.28
+azure-core==1.24.1; python_version >= ""3.6""
+azure-storage-blob==12.12.0; python_version >= ""3.6""
+azure-storage-common==2.1.0
+babel==2.10.1; python_version >= ""3.6""
+beautifulsoup4==4.7.1
+billiard==3.6.4.0; python_version >= ""3.7""
+boto3==1.24.7; python_version >= ""3.7""
+botocore==1.27.7; python_version >= ""3.7""
+braintree==4.15.2
+brotli==1.0.9; platform_python_implementation == ""CPython"" and python_version >= ""3.7""
+brotlicffi==1.0.9.2; platform_python_implementation != ""CPython"" and python_version >= ""3.7""
+cachetools==5.2.0; python_version >= ""3.7"" and python_version < ""4.0"" and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7"")
+celery==5.2.7; python_version >= ""3.7""
+certifi==2022.5.18.1; python_version >= ""3.7"" and python_version < ""4"" and (python_version >= ""3.0"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.0"")
+cffi==1.15.0; platform_python_implementation != ""CPython"" and python_version >= ""3.7""
+charset-normalizer==2.0.12; python_version >= ""3.7"" and python_version < ""4"" and python_full_version >= ""3.5.0"" and (python_version >= ""3.0"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.0"")
+click-didyoumean==0.3.0; python_full_version >= ""3.6.2"" and python_full_version < ""4.0.0"" and python_version >= ""3.7""
+click-plugins==1.1.1; python_version >= ""3.7""
+click-repl==0.2.0; python_version >= ""3.7""
+click==8.1.3; python_full_version >= ""3.6.2"" and python_full_version < ""4.0.0"" and python_version >= ""3.7""
+colorama==0.4.4; python_version >= ""3.7"" and python_full_version < ""3.0.0"" and sys_platform == ""win32"" and platform_system == ""Windows"" or sys_platform == ""win32"" and python_version >= ""3.7"" and python_full_version >= ""3.5.0"" and platform_system == ""Windows""
+cryptography==37.0.2; python_version >= ""3.6""
+cssselect2==0.6.0; python_version >= ""3.7""
+deprecated==1.2.13; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_version >= ""3.7"" and python_full_version >= ""3.4.0""
+dj-database-url==0.5.0
+dj-email-url==1.0.5
+django-appconf==1.0.5; python_version >= ""3.6""
+django-cache-url==3.4.2
+django-celery-beat==2.3.0
+django-countries==7.3.2
+django-filter==21.1; python_version >= ""3.6""
+django-js-asset==2.0.0; python_version >= ""3.6""
+django-measurement==3.2.4
+django-mptt==0.13.4; python_version >= ""3.6""
+django-phonenumber-field==6.1.0; python_version >= ""3.7""
+django-prices-openexchangerates==1.1.0
+django-prices-vatlayer==1.1.0
+django-prices==2.2.0
+django-redis==5.2.0; python_version >= ""3.6""
+django-storages==1.12.3; python_version >= ""3.5""
+django-timezone-field==5.0; python_version >= ""3.7"" and python_version < ""4.0""
+django-versatileimagefield==2.2
+django==3.2.13; python_version >= ""3.6""
+draftjs-sanitizer==1.0.0
+enmerkar==0.7.1
+et-xmlfile==1.1.0; python_version >= ""3.6""
+faker==13.13.0; python_version >= ""3.6""
+fonttools==4.33.3; python_version >= ""3.7""
+freezegun==1.2.1; python_version >= ""3.6""
+google-api-core==2.8.1; python_version >= ""3.7""
+google-auth==2.7.0; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7""
+google-cloud-core==2.3.1; python_version >= ""3.7""
+google-cloud-pubsub==2.13.0; python_version >= ""3.6""
+google-cloud-storage==2.4.0; python_version >= ""3.7""
+google-crc32c==1.3.0; python_version >= ""3.7""
+google-i18n-address==2.5.1
+google-measurement-protocol==1.1.0
+google-resumable-media==2.3.3; python_version >= ""3.7""
+googleapis-common-protos==1.56.2; python_version >= ""3.7""
+graphene==2.1.9
+graphql-core==2.3.2
+graphql-relay==2.0.1
+grpc-google-iam-v1==0.12.4; python_version >= ""3.6""
+grpcio-status==1.46.3; python_version >= ""3.7""
+grpcio==1.46.3; python_version >= ""3.7""
+gunicorn==20.1.0; python_version >= ""3.5""
+h11==0.13.0; python_version >= ""3.7""
+html-to-draftjs==1.0.1
+html2text==2020.1.16; python_version >= ""3.5""
+html5lib==1.1; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.5.0"" and python_version >= ""3.7""
+httptools==0.4.0; python_version >= ""3.7"" and python_full_version >= ""3.5.0""
+idna==3.3; python_version >= ""3.7"" and python_version < ""4"" and (python_version >= ""3.0"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.0"") and python_full_version >= ""3.6.2""
+importlib-metadata==4.11.4; python_version < ""3.10"" and python_version >= ""3.7""
+isodate==0.6.1; python_version >= ""3.6""
+jaeger-client==4.8.0; python_version >= ""3.7""
+jmespath==1.0.0; python_version >= ""3.7""
+jsonfield==3.1.0; python_version >= ""3.6""
+kombu==5.2.4; python_version >= ""3.7""
+lxml==4.9.0; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.5.0""
+markdown==3.3.7; python_version >= ""3.6""
+maxminddb==2.2.0; python_version >= ""3.6""
+measurement==3.2.0
+micawber==0.5.4
+mpmath==1.2.1; python_version >= ""3.7""
+msrest==0.7.0; python_version >= ""3.6""
+oauthlib==3.2.0; python_version >= ""3.6""
+openpyxl==3.0.10; python_version >= ""3.6""
+opentracing==2.4.0
+packaging==21.3; python_version >= ""3.7""
+petl==1.7.9; (python_version >= ""2.7"" and python_full_version < ""3.0.0"") or (python_full_version >= ""3.4.0"")
+phonenumberslite==8.12.50
+pillow==9.1.1; python_version >= ""3.7""
+posuto==2022.6.0
+prices==1.1.0
+promise==2.3
+prompt-toolkit==3.0.29; python_full_version >= ""3.6.2"" and python_version >= ""3.7""
+proto-plus==1.20.5; python_version >= ""3.6""
+protobuf==3.20.1; python_version >= ""3.7""
+psycopg2==2.9.3; python_version >= ""3.6""
+pyasn1-modules==0.2.8; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7""
+pyasn1==0.4.8; python_version >= ""3.7"" and python_full_version < ""3.0.0"" and python_version < ""4"" and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7"") or python_full_version >= ""3.6.0"" and python_version >= ""3.7"" and python_version < ""4"" and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7"")
+pybars3==0.9.7
+pycparser==2.21; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.7""
+pydyf==0.2.0; python_version >= ""3.7""
+pyjwt==2.4.0; python_version >= ""3.6""
+pymeta3==0.5.1
+pyparsing==3.0.9; python_version >= ""3.7"" and python_full_version >= ""3.6.8""
+pyphen==0.12.0; python_version >= ""3.7""
+python-crontab==2.6.0
+python-dateutil==2.8.2; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.3.0"" and python_version >= ""3.7""
+python-dotenv==0.20.0; python_version >= ""3.7""
+python-http-client==3.3.7; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.5.0""
+python-json-logger==2.0.2; python_version >= ""3.5""
+python-magic-bin==0.4.14; sys_platform == ""win32""
+python-magic==0.4.27; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.5.0""
+pytimeparse==1.1.8
+pytz==2022.1; python_version >= ""3.7"" and python_version < ""4.0""
+pyxb==1.2.5
+pyyaml==6.0; python_version >= ""3.7""
+razorpay==1.3.0
+redis==4.3.3; python_version >= ""3.7""
+requests-oauthlib==1.3.1; python_version >= ""3.6"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.6""
+requests==2.28.0; python_version >= ""3.7"" and python_version < ""4""
+rsa==4.8; python_version >= ""3.6"" and python_version < ""4"" and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7"")
+rx==1.6.1
+s3transfer==0.6.0; python_version >= ""3.7""
+sendgrid==6.9.7; (python_version >= ""2.7"" and python_full_version < ""3.0.0"") or (python_full_version >= ""3.5.0"")
+sentry-sdk==1.5.12
+six==1.16.0; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7""
+sniffio==1.2.0; python_version >= ""3.7"" and python_full_version >= ""3.6.2""
+soupsieve==2.3.2.post1; python_version >= ""3.6""
+sqlparse==0.4.2; python_version >= ""3.7""
+starkbank-ecdsa==2.0.3; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.5.0""
+stripe==3.3.0; (python_version >= ""2.7"" and python_full_version < ""3.0.0"") or (python_full_version >= ""3.4.0"")
+sympy==1.10.1; python_version >= ""3.7""
+text-unidecode==1.3
+threadloop==1.0.2; python_version >= ""3.7""
+thrift==0.16.0; python_version >= ""3.7""
+tinycss2==1.1.1; python_version >= ""3.7""
+tornado==6.1; python_version >= ""3.7""
+types-redis==4.2.6
+typing-extensions==4.2.0; python_version >= ""3.7""
+tzdata==2022.1; python_version >= ""2""
+urllib3==1.26.9; python_version >= ""3.7"" and python_full_version < ""3.0.0"" and python_version < ""4"" and (python_version >= ""3.0"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.0"") or python_full_version >= ""3.5.0"" and python_version < ""4"" and python_version >= ""3.7"" and (python_version >= ""3.0"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.0"")
+uvicorn==0.17.6; python_version >= ""3.7""
+uvloop==0.16.0; sys_platform != ""win32"" and sys_platform != ""cygwin"" and platform_python_implementation != ""PyPy"" and python_version >= ""3.7""
+vine==5.0.0; python_version >= ""3.7""
+watchgod==0.8.2; python_version >= ""3.7""
+wcwidth==0.2.5; python_full_version >= ""3.6.2"" and python_version >= ""3.7""
+weasyprint==55.0; python_version >= ""3.7""
+webencodings==0.5.1; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.5.0"" and python_version >= ""3.7""
+websockets==10.3; python_version >= ""3.7""
+wrapt==1.14.1; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_version >= ""3.7"" and python_full_version >= ""3.5.0""
+zipp==3.8.0; python_version < ""3.10"" and python_version >= ""3.7""
+zopfli==0.2.1; python_version >= ""3.7""
+"
+https://github.com/Miserlou/Zappa,django,"#
+# This file is autogenerated by pip-compile
+# To update, run:
+#
+#    pip-compile --output-file=requirements.txt requirements.in
+#
+argcomplete==1.11.1       # via -r requirements.in (line 1)
+boto3==1.14.2             # via -r requirements.in (line 2), kappa
+botocore==1.17.2          # via boto3, s3transfer
+certifi==2020.4.5.2       # via requests
+cfn-flip==1.2.3           # via troposphere
+chardet==3.0.4            # via requests
+click==7.1.2              # via cfn-flip, kappa, pip-tools
+docutils==0.15.2          # via botocore
+durationpy==0.5           # via -r requirements.in (line 3)
+future==0.18.2            # via -r requirements.in (line 11)
+hjson==3.0.1              # via -r requirements.in (line 4)
+idna==2.9                 # via requests
+jmespath==0.10.0          # via -r requirements.in (line 5), boto3, botocore
+kappa==0.6.0              # via -r requirements.in (line 6)
+pip-tools==5.2.1          # via -r requirements.in (line 22)
+placebo==0.9.0            # via kappa
+python-dateutil==2.8.1    # via -r requirements.in (line 8), botocore
+python-slugify==4.0.0     # via -r requirements.in (line 9)
+pyyaml==5.3.1             # via -r requirements.in (line 10), cfn-flip, kappa
+requests==2.23.0          # via -r requirements.in (line 13)
+s3transfer==0.3.3         # via boto3
+six==1.15.0               # via -r requirements.in (line 14), cfn-flip, pip-tools, python-dateutil
+text-unidecode==1.3       # via python-slugify
+toml==0.10.1              # via -r requirements.in (line 15)
+tqdm==4.46.1              # via -r requirements.in (line 16)
+troposphere==2.6.1        # via -r requirements.in (line 17)
+urllib3==1.25.9           # via botocore, requests
+werkzeug==0.16.1          # via -r requirements.in (line 19)
+wheel==0.34.2             # via -r requirements.in (line 20)
+wsgi-request-logger==0.4.6  # via -r requirements.in (line 21)
+
+# The following packages are considered to be unsafe in a requirements file:
+# pip
+"
+https://github.com/cookiecutter/cookiecutter-django,django,"cookiecutter==2.1.1
+sh==1.14.2
+binaryornot==0.4.4
+
+# Code quality
+# ------------------------------------------------------------------------------
+black==22.3.0
+isort==5.10.1
+flake8==4.0.1
+flake8-isort==4.1.1
+pre-commit==2.19.0
+
+# Testing
+# ------------------------------------------------------------------------------
+tox==3.25.0
+pytest==7.1.2
+pytest-cookies==0.6.1
+pytest-instafail==0.4.2
+pyyaml==6.0
+
+# Scripting
+# ------------------------------------------------------------------------------
+PyGithub==1.55
+gitpython==3.1.27
+jinja2==3.1.2
+requests==2.28.0
+"
+https://github.com/django-oscar/django-oscar,django,"# These requirements are only necessary when developing on Oscar.
+
+# development
+Werkzeug>=1.0,<2.1
+django-debug-toolbar>=2.2,<3.3
+django-extensions>=2.2,<3.2
+psycopg2-binary>=2.8,<2.10
+
+# Sandbox
+Whoosh>=2.7,<2.8
+django-environ>=0.4,<0.9
+django-redis>=4.12,<5.3
+pysolr>=3.9,<3.10
+redis>=3.5,<4.2
+requests>=2.25,<3
+uWSGI>=2.0.19,<2.1
+whitenoise>=5.2,<6.1
+
+# Linting
+flake8==4.0.1
+flake8-debugger==4.0.0
+isort==5.10.1
+
+# Helpers
+pyprof2calltree>=1.4,<1.5
+ipdb>=0.13,<0.14
+ipython>=7.12,<9
+
+# Country data
+pycountry
+"
+https://github.com/healthchecks/healthchecks,django,"cron-descriptor==1.2.24
+cronsim==2.1
+Django==4.0.5
+django-compressor==4.0
+fido2==0.9.3
+psycopg2==2.9.3
+pyotp==2.6.0
+requests==2.27.1
+segno==1.4.1
+statsd==3.3.0
+whitenoise==6.2.0"
+https://github.com/jonaswinkler/paperless-ng,django,"#
+# These requirements were autogenerated by pipenv
+# To regenerate from the project's Pipfile, run:
+#
+#    pipenv lock --requirements
+#
+
+-i https://pypi.python.org/simple
+--extra-index-url https://www.piwheels.org/simple
+aioredis==1.3.1
+arrow==1.1.1; python_version >= '3.6'
+asgiref==3.4.1; python_version >= '3.6'
+async-timeout==3.0.1; python_full_version >= '3.5.3'
+attrs==21.2.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+autobahn==21.3.1; python_version >= '3.7'
+automat==20.2.0
+backports.zoneinfo==0.2.1
+blessed==1.18.1; python_version >= '2.7'
+certifi==2021.5.30
+cffi==1.14.6
+channels-redis==3.3.0
+channels==3.0.4
+chardet==4.0.0; python_version >= '3.1'
+charset-normalizer==2.0.4; python_version >= '3'
+click==8.0.1; python_version >= '3.6'
+coloredlogs==15.0.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+concurrent-log-handler==0.9.19
+constantly==15.1.0
+cryptography==3.4.7
+daphne==3.0.2; python_version >= '3.6'
+dateparser==1.0.0
+django-cors-headers==3.8.0
+django-extensions==3.1.3
+django-filter==2.4.0
+django-picklefield==3.0.1; python_version >= '3'
+django-q==1.3.9
+django==3.2.6
+djangorestframework==3.12.4
+filelock==3.0.12
+fuzzywuzzy[speedup]==0.18.0
+gunicorn==20.1.0
+h11==0.12.0; python_version >= '3.6'
+hiredis==2.0.0; python_version >= '3.6'
+httptools==0.2.0
+humanfriendly==9.2; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+hyperlink==21.0.0
+idna==3.2; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+imap-tools==0.46.0
+img2pdf==0.4.1
+incremental==21.3.0
+inotify-simple==1.3.5; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+inotifyrecursive==0.3.5
+joblib==1.0.1; python_version >= '3.6'
+langdetect==1.0.9
+lxml==4.6.3; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+msgpack==1.0.2
+numpy==1.20.3
+ocrmypdf==12.3.2
+pathvalidate==2.4.1
+pdfminer.six==20201018
+pikepdf==2.16.1
+pillow==8.3.1
+pluggy==0.13.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+portalocker==2.3.0; python_version >= '3'
+psycopg2-binary==2.9.1
+pyasn1-modules==0.2.8
+pyasn1==0.4.8
+pycparser==2.20; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+pyopenssl==20.0.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+python-dateutil==2.8.2
+python-dotenv==0.19.0
+python-gnupg==0.4.7
+python-levenshtein==0.12.2
+python-magic==0.4.24
+pytz==2021.1
+pyyaml==5.4.1
+redis==3.5.3
+regex==2021.8.3
+reportlab==3.6.1; python_version >= '2.7' and python_version < '4'
+requests==2.26.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5'
+scikit-learn==0.24.0
+scipy==1.7.1; python_version < '3.10' and python_version >= '3.7'
+service-identity==21.1.0
+six==1.16.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+sortedcontainers==2.4.0
+sqlparse==0.4.1; python_version >= '3.5'
+threadpoolctl==2.2.0; python_version >= '3.6'
+tika==1.24
+tqdm==4.62.1
+twisted[tls]==21.7.0; python_full_version >= '3.6.7'
+txaio==21.2.1; python_version >= '3.6'
+typing-extensions==3.10.0.0
+tzlocal==3.0; python_version >= '3.6'
+urllib3==1.26.6; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'
+uvicorn[standard]==0.15.0
+uvloop==0.16.0
+watchdog==2.1.3
+watchgod==0.7
+wcwidth==0.2.5
+websockets==9.1
+whitenoise==5.3.0
+whoosh==2.7.4
+zope.interface==5.4.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+"
+https://github.com/liangliangyy/DjangoBlog,django,"coverage==6.4
+bleach==5.0.0
+Django==4.0.5
+django-compressor==4.0
+django-haystack==3.2.1
+django-ipware==4.0.2
+django-mdeditor==0.1.20
+django-uuslug==2.0.0
+elasticsearch==7.16.1
+elasticsearch-dsl==7.4.0
+gevent==21.12.0
+jieba==0.42.1
+jsonpickle==2.1.0
+Markdown==3.3.7
+mysqlclient==2.1.0
+Pillow==9.1.1
+Pygments==2.12.0
+python-logstash==0.4.6
+python-slugify==6.1.2
+pytz==2022.1
+raven==6.10.0
+requests==2.28.0
+urllib3==1.26.9
+WeRoBot==1.13.1
+Whoosh==2.7.4
+user-agents==2.2.0
+redis==4.3.3
+"
+https://github.com/LibrePhotos/librephotos,django,"Django==3.1.14
+django-constance==2.7.0
+django-cors-headers==3.5.0
+django-chunked-upload==2.0.0
+django-cryptography==1.0
+django-extensions==3.0.9
+django-filter==2.4.0
+django-picklefield==3.0.1
+django-redis==4.12.1
+django-rq==2.5.1
+django-bulk-update
+django-silk==4.2.0
+djangorestframework==3.12.4
+djangorestframework-simplejwt==4.6.0
+drf-extensions==0.7.0
+drf-spectacular==0.21.2
+face-recognition==1.2.3
+Flask==1.1.4
+Flask-Cors==3.0.9
+Flask-RESTful==0.3.6
+geopy==2.1.0
+gunicorn==20.1.0
+matplotlib==3.3.2 
+networkx==2.6.3
+nltk==3.6.7
+markupsafe==2.0.1
+Pillow==9.0.1
+psycopg2==2.8.6
+pycocotools==2.0.2
+https://github.com/owncloud/pyocclient/archive/master.zip
+pytz==2020.1
+PyExifTool==0.4.9
+PyJWT==2.4.0
+rq==1.10.1
+six==1.15.0
+seaborn==0.11.0
+sentence_transformers==1.2.0
+serpy==0.3.1
+sklearn==0.0
+timezonefinder==5.2.0
+tqdm==4.51.0
+gevent==20.12.1
+python-magic==0.4.18
+Wand==0.6.6 
+"
+https://github.com/jpadilla/django-rest-framework-jwt,django,"# Laying these out as seperate requirements files, allows us to
+# only included the relevent sets when running tox, and ensures
+# we are only ever declaring out dependancies in one place.
+
+-r requirements/optionals.txt
+-r requirements/testing.txt
+-r requirements/documentation.txt
+-r requirements/codestyle.txt
+-r requirements/packaging.txt
+"
+https://github.com/guohongze/adminset,django,"django==1.11.28
+tornado==5.1.1
+ansible==2.7.8
+sh==1.12.9
+mysqlclient==1.3.12
+pytest==3.0.7
+celery==4.2.1
+django-auth-ldap==1.7.0
+python-ldap==3.1.0
+django-celery-beat==1.1.1
+gunicorn==19.7.1
+redis==2.10.5
+psutil==5.2.2
+schedule==0.4.3
+pymongo==3.3.0
+requests==2.20.0
+django-db==0.0.7
+ldap3==2.5.1
+#elfinder requirements
+enum34==1.1.6
+ipaddress==1.0.18
+asn1crypto==0.23.0
+bcrypt==3.1.4
+cffi==1.11.2
+cryptography==2.3
+django-storages==1.6.5
+idna==2.6
+olefile==0.44
+paramiko==2.4.2
+Pillow==4.3.0
+pyasn1==0.4.1
+pycparser==2.18
+PyNaCl==1.2.0
+python-magic==0.4.3
+pytz==2017.3
+six==1.11.0
+"
+https://github.com/WeblateOrg/weblate,django,"bleach>=3.1.1,<6.0
+borgbackup>=1.1.11,<1.3
+celery[redis]>=5.0.3,<5.3
+charset-normalizer>=2.0,<3.0
+cssselect>=1.0.0,<1.2
+Cython>=0.29.14,<0.30
+diff-match-patch==20200713
+django-appconf>=1.0.3,<1.1
+django-compressor>=2.4,<5
+django-crispy-forms>=1.9.0,<1.15
+django-filter>=2.4.0,<23.0
+django-redis>=4.11.0,<6.0
+Django[argon2]>=3.2,<4.2
+djangorestframework>=3.11.0,<3.14
+filelock>=3.7,<3.8
+GitPython>=2.1.15,<3.2
+hiredis>=1.0.1,<2.1
+html2text>=2019.8.11,<2020.1.17
+importlib-metadata>=3.6.0,<4.12; python_version < '3.8'
+jellyfish>=0.7.2,<0.10,!=0.8.3,!=0.8.4,!=0.8.5,!=0.8.6,!=0.8.7,!=0.8.8
+jsonschema>=4.5,<5
+lxml>=4.6.3,<4.10
+misaka>=2.1.0,<2.2
+openpyxl>=2.6.0,<3.1,!=3.0.2
+packaging>=20.5,<22.0
+Pillow>=9.0.0,<10.0
+pyahocorasick>=1.4,<1.5
+pycairo>=1.15.3
+Pygments>=2.6.0,<3.0
+pygobject>=3.34.0
+pyicumessageformat>=1.0.0,<1.1
+pyparsing>=3.0.5,<3.1
+python-dateutil>=2.8.1
+python-redis-lock>=3.6.0,<3.8
+requests>=2.26.0,<2.29
+sentry_sdk>=0.13.0,<1.6
+siphashc>=1.2,<3.0
+social-auth-app-django==5.0.0
+social-auth-core==4.3.0
+translate-toolkit>=3.6.0,<3.8
+translation-finder>=2.7,<3.0
+user-agents>=2.0,<2.3
+weblate-language-data>=2022.3
+weblate-schemas==0.7
+"
+https://github.com/Gerapy/Gerapy,django,"apscheduler>=3.5.1,<=3.7.0
+cryptography>=2.8
+django>=2.2,<3.0
+django-cors-headers>=3.2.0,<=3.7.0
+django-apscheduler>=0.3.0,<=0.6.0
+furl>=2.1.0
+jinja2>=2.11.3
+scrapy>=2.0.0
+scrapy-redis>=0.6.8
+scrapy-splash>=0.7.2
+python-scrapyd-api>=2.1.2
+redis>=2.10.5
+requests>=2.20.0
+pymongo>=3.9.0
+pymysql>=0.7.10
+pyquery>=1.2.17
+beautifulsoup4>=4.7.0
+djangorestframework>=3.11.2
+websocket>=0.2.1
+pyppeteer>=0.0.25
+"
+https://github.com/axnsan12/drf-yasg,django,"# this file is only used when deploying to heroku, because heroku insists on having a root-level requirements.txt
+# for normal usage see the requirements/ directory
+.[validation]
+-r requirements/heroku.txt
+"
+https://github.com/pinry/pinry,django,"--index-url https://pypi.doubanio.com/simple
+
+certifi==2022.5.18.1; python_version >= ""3.6"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.6"" \
+    --hash=sha256:f1d53542ee8cbedbe2118b5686372fb33c297fcd6379b050cca0ef13a597382a \
+    --hash=sha256:9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7
+charset-normalizer==2.0.12; python_full_version >= ""3.6.0"" and python_version >= ""3"" \
+    --hash=sha256:2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597 \
+    --hash=sha256:6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df
+coreapi==2.3.3 \
+    --hash=sha256:bf39d118d6d3e171f10df9ede5666f63ad80bba9a29a8ec17726a66cf52ee6f3 \
+    --hash=sha256:46145fcc1f7017c076a2ef684969b641d18a2991051fddec9458ad3f78ffc1cb
+coreschema==0.0.4 \
+    --hash=sha256:5e6ef7bf38c1525d5e55a895934ab4273548629f16aed5c0a6caa74ebf45551f \
+    --hash=sha256:9503506007d482ab0867ba14724b93c18a33b22b6d19fb419ef2d239dd4a1607
+django-appconf==1.0.5; python_version >= ""3.6"" \
+    --hash=sha256:be3db0be6c81fa84742000b89a81c016d70ae66a7ccb620cdef592b1f1a6aaa4 \
+    --hash=sha256:ae9f864ee1958c815a965ed63b3fba4874eec13de10236ba063a788f9a17389d
+django-braces==1.15.0 \
+    --hash=sha256:f451d08ffc1078d81209a2e17f2219bce20196928853c82405451b18a46875e0 \
+    --hash=sha256:28f00b0f98368c9a37f30cce6087fc57127f0a24c5b8b449f9e1245bded6405d
+django-compressor==4.0 \
+    --hash=sha256:b4fe15cc23bf39420b37cb0030572bd0971104ca1ec3764f502c0f179e576dff \
+    --hash=sha256:1db91b6d04293636a68bd1328dc7bb90d636b0295f67b1cc6d4fa102b9fd25f6
+django-filter==2.4.0; python_version >= ""3.5"" \
+    --hash=sha256:84e9d5bb93f237e451db814ed422a3a625751cbc9968b484ecc74964a8696b06 \
+    --hash=sha256:e00d32cebdb3d54273c48f4f878f898dced8d5dfaad009438fe61ebdf535ace1
+django-taggit==1.3.0; python_version >= ""3.5"" \
+    --hash=sha256:4a833bf71f4c2deddd9745924eee53be1c075d7f0020a06f12e29fa3d752732d \
+    --hash=sha256:609b0223d8a652f3fae088b7fd29f294fdadaca2d7931d45c27d6c59b02fdf31
+django==2.2.28; python_version >= ""3.5"" \
+    --hash=sha256:365429d07c1336eb42ba15aa79f45e1c13a0b04d5c21569e7d596696418a6a45 \
+    --hash=sha256:0200b657afbf1bc08003845ddda053c7641b9b24951e52acd51f6abda33a7413
+djangorestframework==3.13.1; python_version >= ""3.6"" \
+    --hash=sha256:24c4bf58ed7e85d1fe4ba250ab2da926d263cd57d64b03e8dcef0ac683f8b1aa \
+    --hash=sha256:0c33407ce23acc68eca2a6e46424b008c9c02eceb8cf18581921d0092bc1f2ee
+gunicorn==20.1.0; python_version >= ""3.5"" \
+    --hash=sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e \
+    --hash=sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8
+idna==3.3; python_version >= ""3.5"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.5"" \
+    --hash=sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff \
+    --hash=sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d
+itypes==1.2.0 \
+    --hash=sha256:03da6872ca89d29aef62773672b2d408f490f80db48b23079a4b194c86dd04c6 \
+    --hash=sha256:af886f129dea4a2a1e3d36595a2d139589e4dd287f5cab0b40e799ee81570ff1
+jinja2==3.1.2; python_version >= ""3.7"" \
+    --hash=sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61 \
+    --hash=sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852
+markdown==3.1.1; (python_version >= ""2.7"" and python_full_version < ""3.0.0"") or (python_full_version >= ""3.5.0"") \
+    --hash=sha256:56a46ac655704b91e5b7e6326ce43d5ef72411376588afa1dd90e881b83c7e8c \
+    --hash=sha256:2e50876bcdd74517e7b71f3e7a76102050edec255b3983403f1a63e7c8a41e7a
+markupsafe==2.1.1; python_version >= ""3.7"" \
+    --hash=sha256:86b1f75c4e7c2ac2ccdaec2b9022845dbb81880ca318bb7a0a01fbf7813e3812 \
+    --hash=sha256:f121a1420d4e173a5d96e47e9a0c0dcff965afdf1626d28de1460815f7c4ee7a \
+    --hash=sha256:a49907dd8420c5685cfa064a1335b6754b74541bbb3706c259c02ed65b644b3e \
+    --hash=sha256:10c1bfff05d95783da83491be968e8fe789263689c02724e0c691933c52994f5 \
+    --hash=sha256:b7bd98b796e2b6553da7225aeb61f447f80a1ca64f41d83612e6139ca5213aa4 \
+    --hash=sha256:b09bf97215625a311f669476f44b8b318b075847b49316d3e28c08e41a7a573f \
+    --hash=sha256:694deca8d702d5db21ec83983ce0bb4b26a578e71fbdbd4fdcd387daa90e4d5e \
+    --hash=sha256:efc1913fd2ca4f334418481c7e595c00aad186563bbc1ec76067848c7ca0a933 \
+    --hash=sha256:4a33dea2b688b3190ee12bd7cfa29d39c9ed176bda40bfa11099a3ce5d3a7ac6 \
+    --hash=sha256:dda30ba7e87fbbb7eab1ec9f58678558fd9a6b8b853530e176eabd064da81417 \
+    --hash=sha256:671cd1187ed5e62818414afe79ed29da836dde67166a9fac6d435873c44fdd02 \
+    --hash=sha256:3799351e2336dc91ea70b034983ee71cf2f9533cdff7c14c90ea126bfd95d65a \
+    --hash=sha256:e72591e9ecd94d7feb70c1cbd7be7b3ebea3f548870aa91e2732960fa4d57a37 \
+    --hash=sha256:6fbf47b5d3728c6aea2abb0589b5d30459e369baa772e0f37a0320185e87c980 \
+    --hash=sha256:d5ee4f386140395a2c818d149221149c54849dfcfcb9f1debfe07a8b8bd63f9a \
+    --hash=sha256:bcb3ed405ed3222f9904899563d6fc492ff75cce56cba05e32eff40e6acbeaa3 \
+    --hash=sha256:e1c0b87e09fa55a220f058d1d49d3fb8df88fbfab58558f1198e08c1e1de842a \
+    --hash=sha256:8dc1c72a69aa7e082593c4a203dcf94ddb74bb5c8a731e4e1eb68d031e8498ff \
+    --hash=sha256:97a68e6ada378df82bc9f16b800ab77cbf4b2fada0081794318520138c088e4a \
+    --hash=sha256:e8c843bbcda3a2f1e3c2ab25913c80a3c5376cd00c6e8c4a86a89a28c8dc5452 \
+    --hash=sha256:0212a68688482dc52b2d45013df70d169f542b7394fc744c02a57374a4207003 \
+    --hash=sha256:8e576a51ad59e4bfaac456023a78f6b5e6e7651dcd383bcc3e18d06f9b55d6d1 \
+    --hash=sha256:4b9fe39a2ccc108a4accc2676e77da025ce383c108593d65cc909add5c3bd601 \
+    --hash=sha256:96e37a3dc86e80bf81758c152fe66dbf60ed5eca3d26305edf01892257049925 \
+    --hash=sha256:6d0072fea50feec76a4c418096652f2c3238eaa014b2f94aeb1d56a66b41403f \
+    --hash=sha256:089cf3dbf0cd6c100f02945abeb18484bd1ee57a079aefd52cffd17fba910b88 \
+    --hash=sha256:6a074d34ee7a5ce3effbc526b7083ec9731bb3cbf921bbe1d3005d4d2bdb3a63 \
+    --hash=sha256:421be9fbf0ffe9ffd7a378aafebbf6f4602d564d34be190fc19a193232fd12b1 \
+    --hash=sha256:fc7b548b17d238737688817ab67deebb30e8073c95749d55538ed473130ec0c7 \
+    --hash=sha256:e04e26803c9c3851c931eac40c695602c6295b8d432cbe78609649ad9bd2da8a \
+    --hash=sha256:b87db4360013327109564f0e591bd2a3b318547bcef31b468a92ee504d07ae4f \
+    --hash=sha256:99a2a507ed3ac881b975a2976d59f38c19386d128e7a9a18b7df6fff1fd4c1d6 \
+    --hash=sha256:56442863ed2b06d19c37f94d999035e15ee982988920e12a5b4ba29b62ad1f77 \
+    --hash=sha256:3ce11ee3f23f79dbd06fb3d63e2f6af7b12db1d46932fe7bd8afa259a5996603 \
+    --hash=sha256:33b74d289bd2f5e527beadcaa3f401e0df0a89927c1559c8566c066fa4248ab7 \
+    --hash=sha256:43093fb83d8343aac0b1baa75516da6092f58f41200907ef92448ecab8825135 \
+    --hash=sha256:8e3dcf21f367459434c18e71b2a9532d96547aef8a871872a5bd69a715c15f96 \
+    --hash=sha256:d4306c36ca495956b6d568d276ac11fdd9c30a36f1b6eb928070dc5360b22e1c \
+    --hash=sha256:46d00d6cfecdde84d40e572d63735ef81423ad31184100411e6e3388d405e247 \
+    --hash=sha256:7f91197cc9e48f989d12e4e6fbc46495c446636dfc81b9ccf50bb0ec74b91d4b
+mock==4.0.3; python_version >= ""3.6"" \
+    --hash=sha256:122fcb64ee37cfad5b3f48d7a7d51875d7031aaf3d8be7c42e2bee25044eee62 \
+    --hash=sha256:7d3fbbde18228f4ff2f1f119a45cdffa458b4c0dee32eb4d2bb2f82554bac7bc
+pillow==9.1.1; python_version >= ""3.7"" \
+    --hash=sha256:42dfefbef90eb67c10c45a73a9bc1599d4dac920f7dfcbf4ec6b80cb620757fe \
+    --hash=sha256:ffde4c6fabb52891d81606411cbfaf77756e3b561b566efd270b3ed3791fde4e \
+    --hash=sha256:9c857532c719fb30fafabd2371ce9b7031812ff3889d75273827633bca0c4602 \
+    --hash=sha256:59789a7d06c742e9d13b883d5e3569188c16acb02eeed2510fd3bfdbc1bd1530 \
+    --hash=sha256:4d45dbe4b21a9679c3e8b3f7f4f42a45a7d3ddff8a4a16109dff0e1da30a35b2 \
+    --hash=sha256:e9ed59d1b6ee837f4515b9584f3d26cf0388b742a11ecdae0d9237a94505d03a \
+    --hash=sha256:b3fe2ff1e1715d4475d7e2c3e8dabd7c025f4410f79513b4ff2de3d51ce0fa9c \
+    --hash=sha256:5b650dbbc0969a4e226d98a0b440c2f07a850896aed9266b6fedc0f7e7834108 \
+    --hash=sha256:0b4d5ad2cd3a1f0d1df882d926b37dbb2ab6c823ae21d041b46910c8f8cd844b \
+    --hash=sha256:9370d6744d379f2de5d7fa95cdbd3a4d92f0b0ef29609b4b1687f16bc197063d \
+    --hash=sha256:b761727ed7d593e49671d1827044b942dd2f4caae6e51bab144d4accf8244a84 \
+    --hash=sha256:8a66fe50386162df2da701b3722781cbe90ce043e7d53c1fd6bd801bca6b48d4 \
+    --hash=sha256:2b291cab8a888658d72b575a03e340509b6b050b62db1f5539dd5cd18fd50578 \
+    --hash=sha256:1d4331aeb12f6b3791911a6da82de72257a99ad99726ed6b63f481c0184b6fb9 \
+    --hash=sha256:8844217cdf66eabe39567118f229e275f0727e9195635a15e0e4b9227458daaf \
+    --hash=sha256:b6617221ff08fbd3b7a811950b5c3f9367f6e941b86259843eab77c8e3d2b56b \
+    --hash=sha256:20d514c989fa28e73a5adbddd7a171afa5824710d0ab06d4e1234195d2a2e546 \
+    --hash=sha256:088df396b047477dd1bbc7de6e22f58400dae2f21310d9e2ec2933b2ef7dfa4f \
+    --hash=sha256:53c27bd452e0f1bc4bfed07ceb235663a1df7c74df08e37fd6b03eb89454946a \
+    --hash=sha256:3f6c1716c473ebd1649663bf3b42702d0d53e27af8b64642be0dd3598c761fb1 \
+    --hash=sha256:c67db410508b9de9c4694c57ed754b65a460e4812126e87f5052ecf23a011a54 \
+    --hash=sha256:f054b020c4d7e9786ae0404278ea318768eb123403b18453e28e47cdb7a0a4bf \
+    --hash=sha256:c17770a62a71718a74b7548098a74cd6880be16bcfff5f937f900ead90ca8e92 \
+    --hash=sha256:f3f6a6034140e9e17e9abc175fc7a266a6e63652028e157750bd98e804a8ed9a \
+    --hash=sha256:f372d0f08eff1475ef426344efe42493f71f377ec52237bf153c5713de987251 \
+    --hash=sha256:09e67ef6e430f90caa093528bd758b0616f8165e57ed8d8ce014ae32df6a831d \
+    --hash=sha256:66daa16952d5bf0c9d5389c5e9df562922a59bd16d77e2a276e575d32e38afd1 \
+    --hash=sha256:d78ca526a559fb84faaaf84da2dd4addef5edb109db8b81677c0bb1aad342601 \
+    --hash=sha256:55e74faf8359ddda43fee01bffbc5bd99d96ea508d8a08c527099e84eb708f45 \
+    --hash=sha256:7c150dbbb4a94ea4825d1e5f2c5501af7141ea95825fadd7829f9b11c97aaf6c \
+    --hash=sha256:769a7f131a2f43752455cc72f9f7a093c3ff3856bf976c5fb53a59d0ccc704f6 \
+    --hash=sha256:488f3383cf5159907d48d32957ac6f9ea85ccdcc296c14eca1a4e396ecc32098 \
+    --hash=sha256:0b525a356680022b0af53385944026d3486fc8c013638cf9900eb87c866afb4c \
+    --hash=sha256:6e760cf01259a1c0a50f3c845f9cad1af30577fd8b670339b1659c6d0e7a41dd \
+    --hash=sha256:a4165205a13b16a29e1ac57efeee6be2dfd5b5408122d59ef2145bc3239fa340 \
+    --hash=sha256:937a54e5694684f74dcbf6e24cc453bfc5b33940216ddd8f4cd8f0f79167f765 \
+    --hash=sha256:baf3be0b9446a4083cc0c5bb9f9c964034be5374b5bc09757be89f5d2fa247b8 \
+    --hash=sha256:7502539939b53d7565f3d11d87c78e7ec900d3c72945d4ee0e2f250d598309a0
+psycopg2-binary==2.8.6; (python_version >= ""2.7"" and python_full_version < ""3.0.0"") or (python_full_version >= ""3.4.0"") \
+    --hash=sha256:11b9c0ebce097180129e422379b824ae21c8f2a6596b159c7659e2e5a00e1aa0 \
+    --hash=sha256:d14b140a4439d816e3b1229a4a525df917d6ea22a0771a2a78332273fd9528a4 \
+    --hash=sha256:1fabed9ea2acc4efe4671b92c669a213db744d2af8a9fc5d69a8e9bc14b7a9db \
+    --hash=sha256:f5ab93a2cb2d8338b1674be43b442a7f544a0971da062a5da774ed40587f18f5 \
+    --hash=sha256:b4afc542c0ac0db720cf516dd20c0846f71c248d2b3d21013aa0d4ef9c71ca25 \
+    --hash=sha256:e74a55f6bad0e7d3968399deb50f61f4db1926acf4a6d83beaaa7df986f48b1c \
+    --hash=sha256:0deac2af1a587ae12836aa07970f5cb91964f05a7c6cdb69d8425ff4c15d4e2c \
+    --hash=sha256:ad20d2eb875aaa1ea6d0f2916949f5c08a19c74d05b16ce6ebf6d24f2c9f75d1 \
+    --hash=sha256:950bc22bb56ee6ff142a2cb9ee980b571dd0912b0334aa3fe0fe3788d860bea2 \
+    --hash=sha256:b8a3715b3c4e604bcc94c90a825cd7f5635417453b253499664f784fc4da0152 \
+    --hash=sha256:d1b4ab59e02d9008efe10ceabd0b31e79519da6fb67f7d8e8977118832d0f449 \
+    --hash=sha256:ac0c682111fbf404525dfc0f18a8b5f11be52657d4f96e9fcb75daf4f3984859 \
+    --hash=sha256:7d92a09b788cbb1aec325af5fcba9fed7203897bbd9269d5691bb1e3bce29550 \
+    --hash=sha256:aaa4213c862f0ef00022751161df35804127b78adf4a2755b9f991a507e425fd \
+    --hash=sha256:c2507d796fca339c8fb03216364cca68d87e037c1f774977c8fc377627d01c71 \
+    --hash=sha256:ee69dad2c7155756ad114c02db06002f4cded41132cc51378e57aad79cc8e4f4 \
+    --hash=sha256:e82aba2188b9ba309fd8e271702bd0d0fc9148ae3150532bbb474f4590039ffb \
+    --hash=sha256:d5227b229005a696cc67676e24c214740efd90b148de5733419ac9aaba3773da \
+    --hash=sha256:a0eb43a07386c3f1f1ebb4dc7aafb13f67188eab896e7397aa1ee95a9c884eb2 \
+    --hash=sha256:e1f57aa70d3f7cc6947fd88636a481638263ba04a742b4a37dd25c373e41491a \
+    --hash=sha256:833709a5c66ca52f1d21d41865a637223b368c0ee76ea54ca5bad6f2526c7679 \
+    --hash=sha256:ba28584e6bca48c59eecbf7efb1576ca214b47f05194646b081717fa628dfddf \
+    --hash=sha256:6a32f3a4cb2f6e1a0b15215f448e8ce2da192fd4ff35084d80d5e39da683e79b \
+    --hash=sha256:0e4dc3d5996760104746e6cfcdb519d9d2cd27c738296525d5867ea695774e67 \
+    --hash=sha256:cec7e622ebc545dbb4564e483dd20e4e404da17ae07e06f3e780b2dacd5cee66 \
+    --hash=sha256:ba381aec3a5dc29634f20692349d73f2d21f17653bda1decf0b52b11d694541f \
+    --hash=sha256:a0c50db33c32594305b0ef9abc0cb7db13de7621d2cadf8392a1d9b3c437ef77 \
+    --hash=sha256:2dac98e85565d5688e8ab7bdea5446674a83a3945a8f416ad0110018d1501b94 \
+    --hash=sha256:bd1be66dde2b82f80afb9459fc618216753f67109b859a361cf7def5c7968729 \
+    --hash=sha256:8cd0fb36c7412996859cb4606a35969dd01f4ea34d9812a141cd920c3b18be77 \
+    --hash=sha256:89705f45ce07b2dfa806ee84439ec67c5d9a0ef20154e0e475e2b2ed392a5b83 \
+    --hash=sha256:42ec1035841b389e8cc3692277a0bd81cdfe0b65d575a2c8862cec7a80e62e52 \
+    --hash=sha256:7312e931b90fe14f925729cde58022f5d034241918a5c4f9797cac62f6b3a9dd \
+    --hash=sha256:6422f2ff0919fd720195f64ffd8f924c1395d30f9a495f31e2392c2efafb5056 \
+    --hash=sha256:15978a1fbd225583dd8cdaf37e67ccc278b5abecb4caf6b2d6b8e2b948e953f6
+pytz==2022.1; python_version >= ""3.6"" \
+    --hash=sha256:e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c \
+    --hash=sha256:1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7
+rcssmin==1.1.0 \
+    --hash=sha256:2211a5c91ea14a5937b57904c9121f8bfef20987825e55368143da7d25446e3b \
+    --hash=sha256:7085d1b51dd2556f3aae03947380f6e9e1da29fb1eeadfa6766b7f105c54c9ff \
+    --hash=sha256:1512223b6a687bb747e4e531187bd49a56ed71287e7ead9529cbaa1ca4718a0a \
+    --hash=sha256:6158d0d86cd611c5304d738dc3d6cfeb23864dd78ad0d83a633f443696ac5d77 \
+    --hash=sha256:0a6aae7e119509445bf7aa6da6ca0f285cc198273c20f470ad999ff83bbadcf9 \
+    --hash=sha256:506e33ab4c47051f7deae35b6d8dbb4a5c025f016e90a830929a1ecc7daa1682 \
+    --hash=sha256:352dd3a78eb914bb1cb269ac2b66b3154f2490a52ab605558c681de3fb5194d2 \
+    --hash=sha256:30f5522285065cae0164d20068377d84b5d10b414156115f8729b034d0ea5e8b \
+    --hash=sha256:49807735f26f59404194f1e6f93254b6d5b6f7748c2a954f4470a86a40ff4c13 \
+    --hash=sha256:f1a37bbd36b050813673e62ae6464467548628690bf4d48a938170e121e8616e \
+    --hash=sha256:ddff3a41611664c7f1d9e3d8a9c1669e0e155ac0458e586ffa834dc5953e7d9f \
+    --hash=sha256:8b659a88850e772c84cfac4520ec223de6807875e173d8ef3248ab7f90876066 \
+    --hash=sha256:1d7c2719d014e4e4df4e33b75ae8067c7e246cf470eaec8585e06e2efac7586c \
+    --hash=sha256:37f1242e34ca273ed2c26cf778854e18dd11b31c6bfca60e23fce146c84667c1 \
+    --hash=sha256:f31c82d06ba2dbf33c20db9550157e80bb0c4cbd24575c098f0831d1d2e3c5df \
+    --hash=sha256:7da63fee37edf204bbd86785edb4d7491642adbfd1d36fd230b7ccbbd8db1a6f \
+    --hash=sha256:c28b9eb20982b45ebe6adef8bd2547e5ed314dafddfff4eba806b0f8c166cfd1 \
+    --hash=sha256:32ccaebbbd4d56eab08cf26aed36f5d33389b9d1d3ca1fecf53eb6ab77760ddf \
+    --hash=sha256:7c44002b79f3656348196005b9522ec5e04f182b466f66d72b16be0bd03c13d8 \
+    --hash=sha256:27fc400627fd3d328b7fe95af2a01f5d0af6b5af39731af5d071826a1f08e362
+requests==2.27.1; (python_version >= ""2.7"" and python_full_version < ""3.0.0"") or (python_full_version >= ""3.6.0"") \
+    --hash=sha256:f22fa1e554c9ddfd16e6e41ac79759e17be9e492b3587efa038054674760e72d \
+    --hash=sha256:68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61
+rjsmin==1.2.0 \
+    --hash=sha256:e18fe1a610fb105273bb369f61c2b0bd9e66a3f0792e27e4cac44e42ace1968b \
+    --hash=sha256:6c395ffc130332cca744f081ed5efd5699038dcb7a5d30c3ff4bc6adb5b30a62 \
+    --hash=sha256:3b14f4c2933ec194eb816b71a0854ce461b6419a3d852bf360344731ab28c0a6 \
+    --hash=sha256:54fc30519365841b27556ccc1cb94c5b4413c384ff6d467442fddba66e2e325a \
+    --hash=sha256:40e7211a25d9a11ac9ff50446e41268c978555676828af86fa1866615823bfff \
+    --hash=sha256:99e5597a812b60058baa1457387dc79cca7d273b2a700dc98bfd20d43d60711d \
+    --hash=sha256:993935654c1311280e69665367d7e6ff694ac9e1609168cf51cae8c0307df0db \
+    --hash=sha256:c81229ffe5b0a0d5b3b5d5e6d0431f182572de9e9a077e85dbae5757db0ab75c \
+    --hash=sha256:1c93b29fd725e61718299ffe57de93ff32d71b313eaabbfcc7bd32ddb82831d5 \
+    --hash=sha256:38a4474ed52e1575fb9da983ec8657faecd8ab3738508d36e04f87769411fd3d \
+    --hash=sha256:1622fbb6c6a8daaf77da13cc83356539bfe79c1440f9664b02c7f7b150b9a18e \
+    --hash=sha256:4387a00777faddf853eebdece9f2e56ebaf243c3f24676a9de6a20c5d4f3d731 \
+    --hash=sha256:86c4da7285ddafe6888cb262da563570f28e4a31146b5164a7a6947b1222196b \
+    --hash=sha256:d63e193a2f932a786ae82068aa76d1d126fcdff8582094caff9e5e66c4dcc124 \
+    --hash=sha256:05efa485dfddb6418e3b86d8862463aa15641a61f6ae05e7e6de8f116ee77c69 \
+    --hash=sha256:b6a7c8c8d19e154334f640954e43e57283e87bb4a2f6e23295db14eea8e9fc1d \
+    --hash=sha256:2ed83aca637186bafdc894b4b7fc3657e2d74014ccca7d3d69122c1e82675216 \
+    --hash=sha256:41c7c3910f7b8816e37366b293e576ddecf696c5f2197d53cf2c1526ac336646 \
+    --hash=sha256:8944a8a55ac825b8e5ec29f341ecb7574697691ef416506885898d2f780fb4ca \
+    --hash=sha256:6c529feb6c400984452494c52dd9fdf59185afeacca2afc5174a28ab37751a1b
+sqlparse==0.4.2; python_version >= ""3.6"" \
+    --hash=sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d \
+    --hash=sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae
+uritemplate==4.1.1; python_version >= ""3.6"" \
+    --hash=sha256:830c08b8d99bdd312ea4ead05994a38e8936266f84b9a7878232db50b044e02e \
+    --hash=sha256:4346edfc5c3b79f694bccd6d6099a322bbeb628dbf2cd86eea55a456ce5124f0
+urllib3==1.22; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" \
+    --hash=sha256:06330f386d6e4b195fbfc736b297f58c5a892e4440e54d294d7004e3a9bbea1b \
+    --hash=sha256:cc44da8e1145637334317feebd728bd869a35285b93cbb4cca2577da7e62db4f
+"
+https://github.com/rochacbruno/dynaconf,django,"# This file exists only for netlify
+
+# mkdocs-multilang
+# mkdocs-nav-enhancements
+# mkdocs-new-features-notifier
+# mkdocs-versioning
+# mkdocs-material-extensions
+
+mkdocs
+pymdown-extensions
+mkdocs-material
+mkdocs-git-revision-date-plugin
+Jinja2>3.0.0
+"
+https://github.com/rafalp/Misago,django,"#
+# This file is autogenerated by pip-compile
+# To update, run:
+#
+#    pip-compile --output-file=requirements.txt requirements.in
+#
+amqp==2.5.2               # via kombu
+ariadne==0.11.0           # via -r requirements.in
+attrs==19.3.0             # via pytest
+beautifulsoup4==4.7.1     # via -r requirements.in, django-htmlmin
+billiard==3.6.3.0         # via celery
+bleach==3.1.5             # via -r requirements.in
+celery[redis]==4.4.2      # via -r requirements.in
+certifi==2020.4.5.1       # via requests
+cffi==1.14.0              # via cryptography
+chardet==3.0.4            # via requests
+cryptography==2.9.2       # via social-auth-core
+defusedxml==0.6.0         # via python3-openid, social-auth-core
+django-debug-toolbar==1.11  # via -r requirements.in
+django-htmlmin==0.11.0    # via -r requirements.in
+django-js-asset==1.2.2    # via django-mptt
+django-mptt==0.11.0       # via -r requirements.in
+django-simple-sso==0.14.1  # via -r requirements.in
+django==2.2.12            # via -r requirements.in, django-debug-toolbar, django-mptt, django-simple-sso, webservices
+djangorestframework==3.9.4  # via -r requirements.in
+faker==1.0.8              # via -r requirements.in
+fastdiff==0.2.0           # via snapshottest
+graphql-core==3.0.5       # via ariadne
+html5lib==1.0.1           # via -r requirements.in, django-htmlmin
+idna==2.9                 # via requests
+importlib-metadata==1.6.0  # via kombu, pluggy, pytest
+itsdangerous==1.1.0       # via django-simple-sso, webservices
+kombu==4.6.8              # via celery
+markdown==2.6.11          # via -r requirements.in
+more-itertools==8.3.0     # via pytest
+oauthlib==3.1.0           # via requests-oauthlib, social-auth-core
+packaging==20.4           # via bleach, pytest
+pillow==6.2.2             # via -r requirements.in
+pluggy==0.13.1            # via pytest
+psycopg2-binary==2.8.5    # via -r requirements.in
+py==1.8.1                 # via pytest
+pycparser==2.20           # via cffi
+pyjwt==1.7.1              # via -r requirements.in, social-auth-core
+pyparsing==2.4.7          # via packaging
+pytest-django==3.9.0      # via -r requirements.in
+pytest-mock==3.1.0        # via -r requirements.in
+pytest==5.4.2             # via -r requirements.in, pytest-django, pytest-mock
+python-dateutil==2.8.1    # via faker
+python3-openid==3.1.0     # via social-auth-core
+pytz==2020.1              # via -r requirements.in, celery, django
+redis==3.5.2              # via celery
+requests-oauthlib==1.3.0  # via social-auth-core
+requests==2.23.0          # via -r requirements.in, requests-oauthlib, responses, social-auth-core, webservices
+responses==0.10.14        # via -r requirements.in
+six==1.15.0               # via bleach, cryptography, faker, html5lib, packaging, python-dateutil, responses, snapshottest, social-auth-app-django, social-auth-core
+snapshottest==0.5.1       # via -r requirements.in
+social-auth-app-django==3.1.0  # via -r requirements.in
+social-auth-core==3.3.3   # via social-auth-app-django
+soupsieve==2.0.1          # via beautifulsoup4
+sqlparse==0.3.1           # via django, django-debug-toolbar
+starlette==0.13.4         # via ariadne
+termcolor==1.1.0          # via snapshottest
+text-unidecode==1.2       # via faker
+typing-extensions==3.7.4.2  # via ariadne
+unidecode==1.0.23         # via -r requirements.in
+urllib3==1.25.9           # via requests
+vine==1.3.0               # via amqp, celery
+wasmer==0.4.1             # via fastdiff
+wcwidth==0.1.9            # via pytest
+webencodings==0.5.1       # via bleach, html5lib
+webservices[django]==0.7  # via django-simple-sso
+zipp==3.1.0               # via importlib-metadata
+"
+https://github.com/modoboa/modoboa,django,"django<4.0
+django-ckeditor==6.3.0
+django-phonenumber-field[phonenumbers]==6.2.0
+django-reversion==5.0.0
+django-xforwardedfor-middleware==2.0
+django-otp==1.1.3
+django-filter
+
+dj-database-url
+
+djangorestframework>=3.11,<3.14
+drf-spectacular
+uritemplate
+djangorestframework-simplejwt==5.2.0
+
+passlib~=1.7.4
+bcrypt  # Requires libffi-dev and python-dev
+
+asgiref
+dnspython==2.2.1
+feedparser==6.0.10
+greenlet==1.1.2
+gevent==21.12.0
+jsonfield==3.1.0
+Pillow  # Optional dependency for django-ckeditor
+progressbar33==2.4
+py-dateutil==2.2
+cryptography
+pytz
+requests
+lxml
+chardet
+ovh
+oath
+redis
+rrdtool>=0.1.10
+qrcode
+
+aiosmtplib
+aioredis==2.0.1
+"
+https://github.com/viewflow/django-fsm,django,"django>=1.6
+"
+https://github.com/brack3t/django-braces,django,"factory_boy
+mock
+pytest-django
+pytest-cov
+coverage
+django"
+https://github.com/wger-project/wger,django,"#
+# Common requirements for wger
+#
+
+# Application
+bleach~=4.1
+django-bootstrap-breadcrumbs~=0.9
+django-formtools~=2.3
+django-recaptcha~=3.0.0
+Django~=3.2
+django-crispy-forms~=1.14
+django_compressor~=4.0
+django_extensions~=3.1
+django-storages~=1.12
+django-environ==0.9.0
+easy-thumbnails==2.8.1
+icalendar==4.0.9
+invoke==1.7.1
+pillow==9.1.1
+reportlab==3.6.10
+requests==2.28.0
+
+
+# AWS
+#boto3
+
+# REST API
+django-cors-headers==3.13.0
+django-filter==22.1
+djangorestframework~=3.13
+
+# Not used anymore, but needed because some modules are imported in DB migration
+# files
+django-sortedm2m~=3.1
+"
+https://github.com/mirumee/ariadne,django,"#
+# This file is autogenerated by pip-compile with python 3.10
+# To update, run:
+#
+#    pip-compile --output-file=requirements.txt setup.py
+#
+anyio==3.5.0
+    # via starlette
+graphql-core==3.2.1
+    # via ariadne (setup.py)
+idna==3.3
+    # via anyio
+sniffio==1.2.0
+    # via anyio
+starlette==0.19.0
+    # via ariadne (setup.py)
+typing-extensions==4.1.1
+    # via ariadne (setup.py)
+"
+https://github.com/allegro/ralph,django,"-r requirements/base.txt
+"
+https://github.com/doableware/djongo,django,"sqlparse==0.4.2
+pymongo>=3.2.0,<4.0.0
+django>=2.0
+pytz>=2018.5
+=======
+ # requirements.txt
+ #
+ # installs dependencies from ./setup.py, and the package itself,
+ # in editable mode
+ -e .
+"
+https://github.com/ansible-community/ara,django,"pbr!=2.1.0,>=2.0.0 # Apache-2.0
+
+cliff
+requests>=2.14.2
+
+# API server dependencies can be found in setup.cfg extras"
+https://github.com/evennia/evennia,django,"# Evennia dependencies
+
+# general
+django >= 3.2, < 3.3
+twisted >= 21.7.0, < 22.0.0
+pytz
+django-sekizai==2.0.0
+inflect
+autobahn >= 20.7.1, < 21.0.0
+
+# try to resolve dependency issue in py3.7
+attrs >= 19.2.0
+
+# testing and development
+model_mommy
+mock >= 1.0.1
+anything
+black
+
+# windows-specific
+pypiwin32;platform_system==""Windows""
+"
+https://github.com/babybuddy/babybuddy,django,"-i https://pypi.python.org/simple
+asgiref==3.5.2
+boto3==1.23.5
+botocore==1.26.5
+defusedxml==0.7.1
+diff-match-patch==20200713
+dj-database-url==0.5.0
+django==4.0.4
+django-appconf==1.0.5
+django-axes==5.33.0
+django-filter==21.1
+django-imagekit==4.1.0
+django-import-export==2.8.0
+django-ipware==4.0.2
+django-storages==1.12.3
+django-taggit==2.1.0
+django-widget-tweaks==1.4.12
+djangorestframework==3.13.1
+et-xmlfile==1.1.0
+faker==13.11.1
+gunicorn==20.1.0
+jmespath==1.0.0
+markuppy==1.14
+odfpy==1.4.1
+openpyxl==3.0.10
+pilkit==2.0
+pillow==9.1.1
+plotly==5.8.0
+psycopg2-binary==2.9.3
+python-dateutil==2.8.2
+python-dotenv==0.20.0
+pytz==2022.1
+pyyaml==6.0
+s3transfer==0.5.2
+setuptools==62.3.2
+six==1.16.0
+sqlparse==0.4.2
+tablib[html,ods,xls,xlsx,yaml]==3.2.1
+tenacity==8.0.1
+uritemplate==4.1.1
+urllib3==1.26.9
+whitenoise==6.1.0
+xlrd==2.0.1
+xlwt==1.3.0
+"
+https://github.com/arguman/arguman.org,django,"Django==1.7
+Unidecode==0.04.16
+django-social-auth==0.7.28
+httplib2==0.9
+oauth2==1.5.211
+python-openid==2.2.5
+wsgiref==0.1.2
+django-gravatar2==1.1.4
+django-extensions==1.6.1
+markdown2
+pymongo==2.6.3
+django-markitup==2.2.2
+Markdown==2.5.1
+djangorestframework==3.0.2
+django-filter==0.9.2
+django-redis==3.8.3
+redis==2.10.3
+requests
+nltk==3.1
+textblob==0.10.0
+anora==0.1.2
+snowballstemmer==1.2.0
+django-typogrify==1.3.2
+networkx==1.11
+psycopg2
+"
+https://github.com/foxmask/django-th,django,"arrow
+awesome-slugify
+djangorestframework>=3.7.7,<4.0
+Django>=2.0,<3.0
+django-environ
+django-filter
+django-formtools
+django-js-reverse
+django-redis
+evernote3==1.25.12
+feedparser
+github3.py
+joplin-api==1.2.2
+Mastodon.py
+pocket
+praw
+pushbullet.py
+py-trello
+pypandoc
+python-taiga
+pytidylib
+# -e git://github.com/dianakhuang/pytumblr.git@diana/python-3-support#egg=pytumblr
+PyTumblr
+pytz
+requests-oauthlib
+todoist-python
+twython
+wallabag_api==1.1.3
+"
+https://github.com/jimmy201602/webterminal,django,"django==3.1.7
+channels
+redis
+channels-redis
+djangorestframework
+paramiko
+python-gssapi
+Pillow
+django-crispy-forms
+django-otp
+#MySQL-python==1.2.5
+django-cors-headers
+djangorestframework-simplejwt
+pycrypto
+python-magic
+cryptography
+qrcode
+supervisor"
+https://github.com/django-helpdesk/django-helpdesk,django,"Django>=2.2
+django-bootstrap4-form
+celery
+email-reply-parser
+akismet
+markdown
+beautifulsoup4
+lxml
+simplejson
+pytz
+six
+pinax_teams
+djangorestframework
+django-model-utils
+"
+https://github.com/alanjds/drf-nested-routers,django,"# TOX requirements
+-r requirements-tox.txt
+
+# Minimum Django and REST framework version
+Django>=1.11
+djangorestframework>=3.6.0
+
+"
+https://github.com/wsvincent/djangox,django,"Django==4.0.4
+django-allauth==0.50.0
+django-crispy-forms==1.14.0
+django-debug-toolbar==3.2.4
+whitenoise==6.0.0
+psycopg2-binary==2.9.3
+"
+https://github.com/photonixapp/photonix,django,"numpy==1.19.2
+scipy==1.4.1
+matplotlib==3.1.2
+tensorflow==2.4.1
+opencv-python==4.5.1.48
+annoy==1.17.0
+
+Django==3.2.12
+django-cors-headers==3.2.1
+django-filter==2.4.0
+PyJWT==1.7.1
+django-graphql-jwt==0.3.0
+
+graphene==2.1.8
+graphene-django==2.8.0
+Markdown==3.1.1
+Pillow==9.0.1
+
+inotify==0.2.10
+asyncinotify==2.0.2
+python-dateutil==2.8.1
+pytz==2019.3
+pyshp==2.1.0
+requests==2.22.0
+
+python-redis-lock==3.5.0
+redis==3.3.11
+
+psycopg2-binary==2.8.4
+gunicorn==20.0.4
+
+pytest==5.3.4
+pytest-django==3.8.0
+mock==3.0.5
+factory-boy==2.12.0
+coverage==5.0.3
+colorlog==5.0.1
+"
+https://github.com/githublitao/api_automation_test,django,"certifi==2018.1.18
+Django==2.0.2
+django-cors-headers==2.1.0
+djangorestframework==3.7.7
+idna==2.6
+pytz==2017.3
+requests==2.18.4
+django-rest-swagger==2.1.2
+python-docx==0.8.6
+django-crispy-forms==1.7.2
+django-formtools==2.1
+django-import-export==1.0.0
+django-reversion==2.0.13
+python-crontab==2.2.8
+PyMySQL==0.8.1
+XlsxWriter==1.0.5
+PyMySQL==0.8.1
+python-docx==0.8.6
+pypinyin==0.36.0
+uWSGI==2.0.18"
+https://github.com/MicroPyramid/Django-CRM,django,"django==3.2.11
+arrow==1.2.1
+black==20.8b1
+boto3==1.20.37
+# CacheControl==0.12.10
+celery==5.2.3
+codacy-coverage==1.3.11
+# contextlib2==21.6.0
+coverage==6.2
+# cssselect==1.1.0
+# distlib==0.3.3
+# distro==1.6.0
+django-cors-headers==3.11.0
+django-phonenumber-field==6.0.0
+django-ses==2.3.1
+django-settings-export==1.2.1
+django-storages==1.12.3
+# docker==5.0.2
+djangorestframework==3.12.2
+djangorestframework-jwt==1.11.0
+drf-compound-fields==2.0.0
+drf-yasg==1.20.0
+html5lib==1.1
+# importlib-metadata==4.10.1
+# ipaddr==2.2.0
+# lockfile==0.12.2
+# lxml==4.7.1
+openpyxl==3.0.9
+pdfkit==1.0.0
+phonenumbers==8.12.41
+# Pillow==9.0.0
+pip-check==2.7
+pipdeptree==2.2.1
+# progress==1.6
+psycopg2-binary==2.9.3
+pytest-django==4.5.2
+python-dotenv==0.19.2
+# python-memcached==1.59
+pytoml==0.1.21
+redis==4.1.1
+# retrying==1.3.3
+sentry-sdk==1.5.2
+# setuptools==60.5.0
+# uWSGI==2.0.20
+# wheel==0.37.1
+whitenoise==5.3.0
+xlrd==2.0.1
+xlwt==1.3.0"
+https://github.com/mozilla/pontoon,django,"# This file is required by Heroku: ""To specify Python package dependencies on Heroku via pip,
+# add a pip requirements file named requirements.txt to the root of your repository.""
+#
+# Source: https://devcenter.heroku.com/articles/python-pip
+-r requirements/default.txt
+"
+https://github.com/keras-team/keras,machine-learning,"# All the required dependencies should come with tf-nightly package.
+# The rest of the packages are mostly used for testing purpose.
+pandas
+pydot
+scipy ~= 1.5.2
+tf-nightly
+portpicker
+pyyaml
+Pillow
+numpy ~= 1.21.4  # Sync with the numpy version used in TF
+black==22.3.0
+isort==5.10.1
+flake8==4.0.1
+"
+https://github.com/CorentinJ/Real-Time-Voice-Cloning,deep-learning,"﻿inflect==5.3.0
+librosa==0.8.1
+matplotlib==3.5.1
+numpy==1.20.3
+Pillow==8.4.0
+PyQt5==5.15.6
+scikit-learn==1.0.2
+scipy==1.7.3
+sounddevice==0.4.3
+SoundFile==0.10.3.post1
+tqdm==4.62.3
+umap-learn==0.5.2
+Unidecode==1.3.2
+urllib3==1.26.7
+visdom==0.1.8.9
+webrtcvad==2.0.10
+"
+https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap,deep-learning,"mistune>=0.7.2
+beautifulsoup4>=4.4.1
+six>=1.10.0
+"
+https://github.com/ultralytics/yolov5,machine-learning,"# YOLOv5 requirements
+# Usage: pip install -r requirements.txt
+
+# Base ----------------------------------------
+matplotlib>=3.2.2
+numpy>=1.18.5
+opencv-python>=4.1.1
+Pillow>=7.1.2
+PyYAML>=5.3.1
+requests>=2.23.0
+scipy>=1.4.1  # Google Colab version
+torch>=1.7.0
+torchvision>=0.8.1
+tqdm>=4.41.0
+protobuf<=3.20.1  # https://github.com/ultralytics/yolov5/issues/8012
+
+# Logging -------------------------------------
+tensorboard>=2.4.1
+# wandb
+
+# Plotting ------------------------------------
+pandas>=1.1.4
+seaborn>=0.11.0
+
+# Export --------------------------------------
+# coremltools>=4.1  # CoreML export
+# onnx>=1.9.0  # ONNX export
+# onnx-simplifier>=0.3.6  # ONNX simplifier
+# scikit-learn==0.19.2  # CoreML quantization
+# tensorflow>=2.4.1  # TFLite export
+# tensorflowjs>=3.9.0  # TF.js export
+# openvino-dev  # OpenVINO export
+
+# Extras --------------------------------------
+ipython  # interactive notebook
+psutil  # system utilization
+thop  # FLOPs computation
+# albumentations>=1.0.3
+# pycocotools>=2.0  # COCO mAP
+# roboflow
+"
+https://github.com/explosion/spaCy,machine-learning,"# Our libraries
+spacy-legacy>=3.0.9,<3.1.0
+spacy-loggers>=1.0.0,<2.0.0
+cymem>=2.0.2,<2.1.0
+preshed>=3.0.2,<3.1.0
+thinc>=8.1.0.dev2,<8.2.0
+ml_datasets>=0.2.0,<0.3.0
+murmurhash>=0.28.0,<1.1.0
+wasabi>=0.9.1,<1.1.0
+srsly>=2.4.3,<3.0.0
+catalogue>=2.0.6,<2.1.0
+typer>=0.3.0,<0.5.0
+pathy>=0.3.5
+# Third party dependencies
+numpy>=1.15.0
+requests>=2.13.0,<3.0.0
+tqdm>=4.38.0,<5.0.0
+pydantic>=1.7.4,!=1.8,!=1.8.1,<1.10.0
+jinja2
+langcodes>=3.2.0,<4.0.0
+# Official Python utilities
+setuptools
+packaging>=20.0
+typing_extensions>=3.7.4.1,<4.2.0; python_version < ""3.8""
+# Development dependencies
+pre-commit>=2.13.0
+cython>=0.25,<3.0
+pytest>=5.2.0,!=7.1.0
+pytest-timeout>=1.3.0,<2.0.0
+mock>=2.0.0,<3.0.0
+flake8>=3.8.0,<3.10.0
+hypothesis>=3.27.0,<7.0.0
+mypy>=0.910,<=0.960
+types-dataclasses>=0.1.3; python_version < ""3.7""
+types-mock>=0.1.1
+types-requests
+black>=22.0,<23.0
+"
+https://github.com/babysor/MockingBird,deep-learning,"umap-learn
+visdom
+librosa==0.8.1
+matplotlib>=3.3.0
+numpy==1.19.3; platform_system == ""Windows""
+numpy==1.19.4; platform_system != ""Windows""
+scipy>=1.0.0
+tqdm
+sounddevice
+SoundFile
+Unidecode
+inflect
+PyQt5
+multiprocess
+numba
+webrtcvad; platform_system != ""Windows""
+pypinyin
+flask
+flask_wtf
+flask_cors==3.0.10
+gevent==21.8.0
+flask_restx
+tensorboard
+streamlit==1.8.0
+PyYAML==5.4.1
+torch_complex
+espnet
+PyWavelets"
+https://github.com/eriklindernoren/ML-From-Scratch,machine-learning,"matplotlib
+numpy
+sklearn
+pandas
+cvxopt
+scipy
+progressbar33
+terminaltables
+gym
+"
+https://github.com/TencentARC/GFPGAN,deep-learning,"basicsr>=1.3.4.0
+facexlib>=0.2.3
+lmdb
+numpy<1.21  # numba requires numpy<1.21,>=1.17
+opencv-python
+pyyaml
+scipy
+tb-nightly
+torch>=1.7
+torchvision
+tqdm
+yapf
+"
+https://github.com/Lightning-AI/lightning,machine-learning,"# the default package dependencies
+-r ./requirements/base.txt
+"
+https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix,computer-vision,"torch>=1.4.0
+torchvision>=0.5.0
+dominate>=2.4.0
+visdom>=0.1.8.8
+wandb
+"
+https://github.com/JaidedAI/EasyOCR,machine-learning,"torch
+torchvision>=0.5
+opencv-python-headless<=4.5.4.60
+scipy
+numpy
+Pillow
+scikit-image
+python-bidi
+PyYAML
+"
+https://github.com/jina-ai/jina,machine-learning,.
+https://github.com/aleju/imgaug,machine-learning,"six
+# The test for imgaug.augmenters.blend.blend_alpha() fails for numpy<1.15.
+# All other tests seemed to work as of 2019/01/04.
+numpy>=1.15
+scipy
+Pillow
+matplotlib
+scikit-image>=0.14.2
+opencv-python-headless
+# imageio versions past 2.6.1 do not support <3.5 anymore
+imageio<=2.6.1; python_version<'3.5'
+imageio; python_version>='3.5'
+Shapely
+# numba is not available in <=3.5
+numba; python_version>='3.6'
+"
+https://github.com/davidsandberg/facenet,computer-vision,"tensorflow==1.7
+scipy
+scikit-learn
+opencv-python
+h5py
+matplotlib
+Pillow
+requests
+psutil
+"
+https://github.com/tonybeltramelli/pix2code,deep-learning,"Keras==2.1.2
+numpy==1.13.3
+opencv-python==3.3.0.10
+h5py==2.7.1
+tensorflow==1.4.0
+"
+https://github.com/allenai/allennlp,deep-learning,"################################
+###### Core dependencies #######
+################################
+torch>=1.10.0,<1.12.0
+torchvision>=0.8.1,<0.13.0
+cached-path>=1.1.3,<1.2.0
+fairscale==0.4.6
+jsonnet>=0.10.0 ; sys.platform != 'win32'
+nltk>=3.6.5
+spacy>=2.1.0,<3.4
+numpy>=1.21.4
+tensorboardX>=1.2
+requests>=2.28
+tqdm>=4.62
+h5py>=3.6.0
+scikit-learn>=1.0.1
+scipy>=1.7.3
+pytest>=6.2.5
+transformers>=4.1,<4.19
+sentencepiece>=0.1.96
+dataclasses;python_version<'3.7'
+filelock>=3.3,<3.8
+lmdb>=1.2.1
+more-itertools>=8.12.0
+termcolor==1.1.0
+wandb>=0.10.0,<0.13.0
+huggingface_hub>=0.0.16
+dill>=0.3.4
+base58>=2.1.1
+
+# Spacy depends on typer, and typer had a bug. This is how we make sure we get the fixed version of typer.
+typer>=0.4.1
+
+# Narrowing constraints
+rich==12.1
+
+# Indirect dependency of cached-path
+# pyasn1<0.5.0,>=0.4.8
+# pyasn1-modules>=0.2.8
+
+# Protobuf is a dependency of wandb and tensorboard, but they are missing this pin.
+protobuf==3.20.0
+
+# We need this for building the Docker image
+traitlets>5.1.1
+
+##################################################
+###### Extra dependencies for integrations #######
+##################################################
+# NOTE: we use a special trailing comment on each line to denote which extras
+# each package is needed by. For example, checklist is needed by the 'checklist' extra
+# that you install with 'pip install allennlp[checklist]'.
+checklist==0.0.11  # needed by: checklist
+"
+https://github.com/zalandoresearch/fashion-mnist,machine-learning,"scikit-learn>=0.19.0
+psutil>=5.2.2
+"
+https://github.com/alexjc/neural-doodle,deep-learning,"colorama
+pillow>=3.2.0
+Theano>=0.8.1
+git+https://github.com/Lasagne/Lasagne.git@0440814#egg=Lasagne==0.2-dev
+"
+https://github.com/deepmind/sonnet,machine-learning,"absl-py>=0.7.1
+numpy>=1.16.3
+dm-tree>=0.1.1
+wrapt>=1.11.1
+tabulate>=0.7.5
+"
+https://github.com/ydataai/pandas-profiling,machine-learning,"joblib~=1.1.0
+scipy>=1.4.1
+pandas>=0.25.3,!=1.0.1,!=1.0.0,!=1.0.2,!=1.1.0
+matplotlib>=3.2.0
+pydantic>=1.8.1
+PyYAML>=5.0.0
+jinja2>=2.11.1
+visions[type_image_path]==0.7.5
+numpy>=1.16.0
+# Could be optional
+# Related to HTML report
+htmlmin>=0.1.12
+# Missing values
+missingno>=0.4.2
+# Correlations
+phik>=0.11.1
+# Text analysis
+tangled-up-in-unicode==0.2.0
+# Examples
+requests>=2.24.0
+# Progress bar
+tqdm>=4.48.2
+seaborn>=0.10.1
+multimethod>=1.4
+"
+https://github.com/rushter/MLAlgorithms,machine-learning,"tqdm
+matplotlib>=1.5.1
+numpy>=1.11.1
+scikit-learn>=0.18
+scipy>=0.18.0
+seaborn>=0.7.1
+autograd>=1.1.7
+gym
+"
+https://github.com/ultralytics/yolov3,machine-learning,"# pip install -r requirements.txt
+
+# Base ----------------------------------------
+matplotlib>=3.2.2
+numpy>=1.18.5
+opencv-python>=4.1.2
+Pillow>=7.1.2
+PyYAML>=5.3.1
+requests>=2.23.0
+scipy>=1.4.1
+torch>=1.7.0
+torchvision>=0.8.1
+tqdm>=4.41.0
+
+# Logging -------------------------------------
+tensorboard>=2.4.1
+wandb
+
+# Plotting ------------------------------------
+pandas>=1.1.4
+seaborn>=0.11.0
+
+# Export --------------------------------------
+# coremltools>=4.1  # CoreML export
+# onnx>=1.9.0  # ONNX export
+# onnx-simplifier>=0.3.6  # ONNX simplifier
+# scikit-learn==0.19.2  # CoreML quantization
+# tensorflow>=2.4.1  # TFLite export
+# tensorflowjs>=3.9.0  # TF.js export
+
+# Extras --------------------------------------
+# albumentations>=1.0.3
+# Cython  # for pycocotools https://github.com/cocodataset/cocoapi/issues/172
+# pycocotools>=2.0  # COCO mAP
+# roboflow
+thop  # FLOPs computation
+"
+https://github.com/eriklindernoren/Keras-GAN,deep-learning,"keras
+git+https://www.github.com/keras-team/keras-contrib.git
+matplotlib
+numpy
+scipy
+pillow
+#urllib
+#skimage
+scikit-image
+#gzip
+#pickle
+"
+https://github.com/ludwig-ai/ludwig,machine-learning,"Cython>=0.25
+h5py>=2.6,!=3.0.0
+numpy>=1.15
+pandas>=0.25,!=1.1.5
+scipy>=0.18
+tabulate>=0.7
+scikit-learn
+tqdm
+torch>=1.10.0
+torchaudio
+torchtext
+torchvision>=0.10.1
+transformers>=4.10.1
+spacy>=2.3
+PyYAML>=3.12
+absl-py
+kaggle
+requests
+tables
+fsspec[http]
+dataclasses-json
+jsonschema>=4.5.0
+marshmallow
+marshmallow-jsonschema
+marshmallow-dataclass==8.5.5
+tensorboard
+torchmetrics<0.9
+torchinfo
+filelock
+psutil
+protobuf==3.20.1 # https://github.com/databrickslabs/dbx/issues/257
+
+# new data format support
+xlwt            # excel
+xlrd            # excel
+openpyxl        # excel
+pyarrow==6.0.1  # parquet https://github.com/ray-project/ray/issues/22310
+lxml            # html
+"
+https://github.com/PaddlePaddle/PaddleHub,deep-learning,"colorama
+colorlog
+easydict
+filelock
+flask >= 1.1.0
+numpy
+matplotlib
+opencv-python
+packaging
+paddle2onnx >= 0.5.1
+paddlenlp >= 2.0.0
+Pillow
+pyyaml
+pyzmq
+rarfile
+tqdm
+visualdl >= 2.0.0
+# gunicorn not support windows
+gunicorn >= 19.10.0; sys_platform != ""win32""
+"
+https://github.com/Megvii-BaseDetection/YOLOX,deep-learning,"# TODO: Update with exact module version
+numpy
+torch>=1.7
+opencv_python
+loguru
+scikit-image
+tqdm
+torchvision
+Pillow
+thop
+ninja
+tabulate
+tensorboard
+
+# verified versions
+# pycocotools corresponds to https://github.com/ppwwyyxx/cocoapi
+pycocotools>=2.0.2
+onnx==1.8.1
+onnxruntime==1.8.0
+onnx-simplifier==0.3.5
+"
+https://github.com/jadore801120/attention-is-all-you-need-pytorch,deep-learning,"dill==0.3.3
+msgpack-numpy==0.4.7.1
+msgpack-python==1.0.2
+python==3.6.12
+pytorch==1.3.1
+spacy==2.3.5
+tensorboard==1.14.0
+tensorflow==1.14.0
+terminado==0.9.2
+tqdm==4.56.0
+"
+https://github.com/Hironsan/BossSensor,machine-learning,"h5py==2.8.0
+Keras==2.2.4
+mock==2.0.0
+numpy==1.15.3
+pbr==5.1.0
+protobuf==3.6.1
+PyYAML==3.13
+scikit-learn==0.20.0
+scipy==1.1.0
+six==1.11.0
+sklearn==0.0
+tensorflow==1.11.0
+Theano==1.0.3
+"
+https://github.com/xuebinqin/U-2-Net,computer-vision,"numpy==1.15.2
+scikit-image==0.14.0
+torch
+torchvision
+pillow==8.1.1
+opencv-python
+paddlepaddle
+paddlehub
+gradio
+"
+https://github.com/yzhao062/pyod,machine-learning,"joblib
+matplotlib
+numpy>=1.19
+numba>=0.51
+scipy>=1.5.1
+scikit_learn>=0.20.0
+six
+statsmodels"
+https://github.com/deepmipt/DeepPavlov,machine-learning,"aio-pika==6.4.1
+Cython==0.29.14
+fastapi==0.47.1
+filelock==3.0.12
+h5py==2.10.0
+nltk==3.4.5
+numpy==1.18.0
+overrides==2.7.0
+pandas==0.25.3
+prometheus-client==0.7.1
+protobuf<4
+pytz==2019.1
+pydantic==1.3
+pymorphy2==0.8
+pymorphy2-dicts-ru
+pyopenssl==22.0.0
+pytelegrambotapi==3.6.7
+requests==2.22.0
+ruamel.yaml==0.15.100
+rusenttokenize==0.0.5
+scikit-learn==0.21.2
+scipy==1.4.1
+tqdm==4.62.0
+click==7.1.2
+uvicorn==0.11.7
+sacremoses==0.0.35
+uvloop==0.14.0
+"
+https://github.com/1adrianb/face-alignment,deep-learning,"opencv-python
+scipy>=0.17.0
+scikit-image
+numba
+"
+https://github.com/milesial/Pytorch-UNet,deep-learning,"matplotlib
+numpy
+Pillow
+torch
+torchvision
+tqdm
+wandb"
+https://github.com/wb14123/seq2seq-couplet,machine-learning,"Flask==1.0.2
+Flask-Cors==3.0.9
+gevent==1.2.2
+greenlet==0.4.13
+numpy
+tensorboard==1.15
+tensorflow-gpu==1.15
+"
+https://github.com/coqui-ai/TTS,deep-learning,"# core deps
+numpy==1.21.6
+cython==0.29.28
+scipy>=1.4.0
+torch>=1.7
+torchaudio
+soundfile
+librosa==0.8.0
+numba==0.55.1
+inflect
+tqdm
+anyascii
+pyyaml
+fsspec>=2021.04.0
+# deps for examples
+flask
+# deps for inference
+pysbd
+# deps for notebooks
+umap-learn==0.5.1
+pandas
+# deps for training
+matplotlib
+pyworld==0.2.10 # > 0.2.10 is not p3.10.x compatible
+# coqui stack
+trainer
+# config management
+coqpit>=0.0.16
+# chinese g2p deps
+jieba
+pypinyin
+# japanese g2p deps
+mecab-python3==1.0.5
+unidic-lite==1.0.8
+# gruut+supported langs
+gruut[cs,de,es,fr,it,nl,pt,ru,sv]==2.2.3
+"
+https://github.com/jacobgil/pytorch-grad-cam,deep-learning,"numpy
+Pillow
+torch>=1.7.1
+torchvision>=0.8.2
+ttach
+tqdm
+opencv-python"
+https://github.com/facebookresearch/mmf,deep-learning,"torch>=1.6.0, <=1.9.0
+torchvision>=0.7.0, <=0.10.0
+numpy>=1.16.6, <=1.21.4
+tqdm>=4.43.0,<4.50.0
+torchtext==0.5.0
+GitPython==3.1.0
+requests==2.23.0
+fasttext==0.9.1
+nltk==3.4.5
+editdistance==0.5.3
+transformers>=3.4.0, <=4.10.1
+sklearn==0.0
+omegaconf>=2.0.6, <=2.1
+lmdb==0.98
+termcolor==1.1.0
+iopath==0.1.8
+datasets==1.2.1
+matplotlib==3.3.4
+pycocotools==2.0.2
+ftfy==5.8
+pytorch-lightning @ git+https://github.com/PyTorchLightning/pytorch-lightning@9b011606f
+torchaudio>=0.6.0, <=0.9.0
+psutil
+pillow==9.0.1
+"
+https://github.com/mdbloice/Augmentor,deep-learning,"Pillow
+tqdm
+numpy"
+https://github.com/minimaxir/textgenrnn,deep-learning,"h5py
+scikit-learn
+tqdm
+tensorflow>=2.1.0
+"
+https://github.com/alicevision/meshroom,computer-vision,"# runtime
+psutil>=5.6.3
+enum34;python_version<""3.4""
+PySide2==5.14.1
+markdown==2.6.11
+requests==2.22.0
+"
+https://github.com/PeterL1n/BackgroundMattingV2,machine-learning,"kornia==0.4.1
+tensorboard==2.3.0
+torch==1.7.0
+torchvision==0.8.1
+tqdm==4.51.0
+opencv-python==4.4.0.44
+onnxruntime==1.6.0"
+https://github.com/scikit-image/scikit-image,computer-vision,"-r requirements/default.txt
+-r requirements/test.txt
+"
+https://github.com/astorfi/TensorFlow-World,computer-vision,"numpy
+scipy
+python-coveralls
+tensorflow
+matplotlib
+xlrd
+scikit-learn
+pandas
+scikit-image
+"
+https://github.com/idealo/imagededup,computer-vision,"tensorflow>1.0
+Pillow<7.0.0
+tqdm
+scikit-learn
+PyWavelets~=1.1.1
+matplotlib
+# Development dependencies
+cython>=0.29"
+https://github.com/STVIR/pysot,computer-vision,"opencv-python
+yacs
+tqdm
+pyyaml
+matplotlib
+colorama
+cython
+tensorboardX
+"
+https://github.com/KaiyangZhou/deep-person-reid,computer-vision,"numpy
+Cython
+h5py
+Pillow
+six
+scipy
+opencv-python
+matplotlib
+tb-nightly
+future
+yacs
+gdown
+flake8
+yapf
+isort==4.3.21
+imageio"
+https://github.com/open-mmlab/mmediting,computer-vision,"-r requirements/runtime.txt
+-r requirements/tests.txt
+"
+https://github.com/podgorskiy/ALAE,computer-vision,"packaging
+imageio
+numpy
+scipy
+tqdm
+dlutils
+bimpy >= 0.1.1
+dareblopy >= 0.0.5
+torch >= 1.3
+torchvision
+sklearn
+yacs
+matplotlib
+"
+https://github.com/foolwood/SiamMask,computer-vision,"Cython==0.29.4
+colorama==0.3.9
+numpy==1.15.4
+requests==2.21.0
+fire==0.1.3
+torch==0.4.1
+matplotlib==2.2.3
+numba==0.39.0
+scipy==1.1.0
+h5py==2.8.0
+pandas==0.23.4
+tqdm==4.29.1
+tensorboardX==1.6
+opencv_python==3.4.3.18
+torch==0.4.1
+torchvision==0.2.1
+"
+https://github.com/cleardusk/3DDFA,computer-vision,"torch>=0.4.1
+torchvision>=0.2.1
+numpy>=1.15.4
+scipy>=1.1.0
+matplotlib==3.0.2
+dlib==19.5.0 # 19.15+ version may cause conflict with pytorch, this may take several minutes
+opencv-python>=3.4.3.18
+"
+https://github.com/richzhang/colorization,computer-vision,"torch
+skimage
+numpy
+matplotlib
+argparse
+PIL"
+https://github.com/tianzhi0549/FCOS,computer-vision,"torch
+torchvision
+ninja
+yacs
+cython
+matplotlib
+tqdm
+opencv-python
+scikit-image
+
+"
+https://github.com/Tencent/PocketFlow,computer-vision,"docopt>=0.6.2
+hdfs>=2.1.0
+numpy>=1.14.0
+scipy>=1.0.0
+sklearn>=0.19.1
+pandas>=0.22.0
+mpi4py>=3.0.0
+tensorflow>=1.10.0
+"
+https://github.com/sightmachine/SimpleCV,computer-vision,"numpy
+scipy
+PIL
+ipython
+svgwrite
+pygame==1.9.1release
+"
+https://github.com/hzwer/arXiv2021-RIFE,computer-vision,"numpy>=1.16
+tqdm>=4.35.0
+sk-video>=1.1.10
+torch==1.6.0
+opencv-python>=4.1.2
+moviepy>=1.0.3
+torchvision==0.7.0
+"
+https://github.com/cleardusk/3DDFA_V2,computer-vision,"torch
+torchvision
+matplotlib
+numpy
+opencv-python # cv2
+imageio
+imageio-ffmpeg
+pyyaml # yaml
+tqdm
+argparse
+cython
+scikit-image # skimage
+scipy
+onnxruntime
+gradio
+"
+https://github.com/obss/sahi,computer-vision,"opencv-python>=4.2.0.32
+shapely>=1.8.0
+tqdm>=4.48.2
+pillow>=8.2.0
+pybboxes==0.1.1; python_version < '3.8'
+pybboxes; python_version >= '3.8'
+pyyaml
+fire
+terminaltables
+requests
+click==8.0.4"
+https://github.com/GauravBh1010tt/DeepLearn,computer-vision,"# Library dependencies for the python code.  You need to install these with
+# `pip install -r requirements.txt` before you can run this.
+
+#### ESSENTIAL LIBRARIES FOR MAIN FUNCTIONALITY ####
+
+numpy
+matplotlib
+pandas
+scikit-learn
+scipy
+h5py
+keras
+theano
+nltk
+textstat
+gensim
+stop_words
+tqdm"
+https://github.com/NVIDIA/MinkowskiEngine,computer-vision,"numpy
+torch>=1.4,<1.7
+"
+https://github.com/azavea/raster-vision,computer-vision,"rastervision_pipeline==0.13
+rastervision_aws_s3==0.13
+rastervision_aws_batch==0.13
+rastervision_core==0.13
+rastervision_pytorch_learner==0.13
+rastervision_pytorch_backend==0.13.1
+rastervision_gdal_vsi==0.13
+"
+https://github.com/wkentaro/pytorch-fcn,computer-vision,"fcn>=6.1.5
+numpy
+Pillow
+pytz
+scipy
+torch>=0.2.0
+torchvision>=0.1.8
+tqdm
+"
+https://github.com/victordibia/handtracking,computer-vision,# tensorflow==2.3.1
+https://github.com/adobe/antialiased-cnns,computer-vision,"torch
+torchvision"
+https://github.com/taesungp/contrastive-unpaired-translation,computer-vision,"torch>=1.4.0
+torchvision>=0.5.0
+dominate>=2.4.0
+visdom>=0.1.8.8
+packaging
+GPUtil>=1.4.0
+"
+https://github.com/kakaobrain/fast-autoaugment,computer-vision,"git+https://github.com/wbaek/theconf@de32022f8c0651a043dc812d17194cdfd62066e8
+git+https://github.com/ildoonet/pytorch-gradual-warmup-lr.git@08f7d5e
+git+https://github.com/ildoonet/pystopwatch2.git
+git+https://github.com/hyperopt/hyperopt.git
+
+pretrainedmodels
+tqdm
+tensorboardx
+sklearn
+ray
+matplotlib
+psutil
+requests"
+https://github.com/Mukosame/Anime2Sketch,computer-vision,"torch
+torchvision
+Pillow
+gradio
+torchtext
+tqdm"
+https://github.com/toandaominh1997/EfficientDet.Pytorch,computer-vision,"numpy
+pandas
+torch
+torchvision
+pytoan
+albumentations
+"
+https://github.com/voxel51/fiftyone,computer-vision,"-r requirements/prod.txt
+"
+https://github.com/peterliht/knowledge-distillation-pytorch,computer-vision,"scipy==1.0.0
+numpy==1.14.0
+Pillow==8.1.1
+tabulate==0.8.2
+tensorflow==1.7.0rc0
+torch==0.3.0.post4
+torchvision==0.2.0
+tqdm==4.19.8
+torchnet
+"
+https://github.com/xinshuoweng/AB3DMOT,computer-vision,"wheel==0.37.1
+scikit-learn==0.19.2
+filterpy==1.4.5
+numba==0.43.1	
+matplotlib==2.2.3
+pillow>=8.3.2
+opencv-python==4.2.0.32
+glob2==0.6
+PyYAML==5.4
+easydict==1.9
+llvmlite==0.32.1 			"
+https://github.com/torchgan/torchgan,computer-vision,"numpy
+pillow
+scipy
+torch>=1.2
+torchvision>=0.4
+wget"
+https://github.com/mlfoundations/open_clip,computer-vision,"torch>=1.9.0
+torchvision
+regex
+ftfy
+tqdm
+"
+https://github.com/lufficc/SSD,computer-vision,"torch>=1.3
+torchvision>=0.3
+yacs
+tqdm
+opencv-python
+vizer"
+https://github.com/gnes-ai/gnes,computer-vision,.
+https://github.com/HyperGAN/HyperGAN,computer-vision,"hyperchamber==0.3.1
+inflection
+numpy
+pillow
+psutil
+pyparsing
+torch
+torchvision
+semantic_version
+"
+https://github.com/tensorlayer/hyperpose,computer-vision,"cython>=0.29
+numpy==1.16.4
+easydict>=1.9,<=1.10
+opencv-python>=3.4,<3.5
+tensorflow==2.3.1
+tensorlayer==2.2.3
+pycocotools==2.0.0  # must be installed after cython and numpy are installed
+"
+https://github.com/HypoX64/DeepMosaics,computer-vision,"opencv_python==4.5.1.48
+numpy==1.19.3
+torchvision==0.8.2
+torch==1.7.1
+matplotlib==3.3.2
+tensorboardX==2.2
+scikit-image==0.17.2"
+https://github.com/ahmetozlu/tensorflow_object_counting_api,computer-vision,"numpy
+scipy
+Pillow
+cython
+matplotlib
+scikit-image
+tensorflow
+keras==2.0.8
+opencv-python==4.4.0.42
+h5py
+imgaug
+"
+https://github.com/ageitgey/face_recognition,machine-learning,"face_recognition_models
+Click>=6.0
+dlib>=19.3.0
+numpy
+Pillow
+scipy>=0.17.0
+"
+https://github.com/gunthercox/ChatterBot,machine-learning,"mathparse>=0.1,<0.2
+python-dateutil>=2.8,<2.9
+sqlalchemy>=1.3,<1.4
+pytz
+"
+https://github.com/hindupuravinash/the-gan-zoo,machine-learning,"astroid==2.0.4
+beautifulsoup4==4.6.3
+bs4==0.0.1
+certifi==2018.8.24
+chardet==3.0.4
+cycler==0.10.0
+idna==2.7
+isort==4.3.4
+Jinja2==2.10
+kiwisolver==1.0.1
+lazy-object-proxy==1.3.1
+MarkupSafe==1.0
+matplotlib==2.2.3
+mccabe==0.6.1
+numpy==1.15.1
+Pillow==5.2.0
+pylint==2.1.1
+pyparsing==2.2.0
+python-dateutil==2.7.3
+pytz==2018.5
+requests==2.19.1
+six==1.11.0
+typed-ast==1.1.0
+urllib3==1.23
+wrapt==1.10.11
+"
+https://github.com/OpenBB-finance/OpenBBTerminal,machine-learning,"aiohttp==3.8.1; python_version >= ""3.6""
+aiosignal==1.2.0; python_version >= ""3.6""
+alpha-vantage==2.3.1
+ansiwrap==0.8.4; python_version >= ""3.6""
+anyio==3.6.1; python_full_version >= ""3.6.2"" and python_version >= ""3.7""
+appnope==0.1.3; platform_system == ""Darwin"" and python_version >= ""3.8"" and sys_platform == ""darwin"" and python_full_version >= ""3.6.2""
+arch==5.2.0; python_version >= ""3.7""
+argon2-cffi-bindings==21.2.0; python_version >= ""3.7""
+argon2-cffi==21.3.0; python_version >= ""3.7""
+ascii-magic==1.6; python_version >= ""3.5""
+astor==0.8.1; python_full_version >= ""3.7.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.8""
+astropy==5.1; python_version >= ""3.8""
+asttokens==2.0.5; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+async-generator==1.10; python_version >= ""3.7"" and python_version < ""4.0""
+async-timeout==4.0.2; python_version >= ""3.6""
+attrs==21.4.0; python_full_version >= ""3.7.0"" and python_version >= ""3.7"" and python_version < ""4.0"" and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" and python_version < ""4.0"" or python_version >= ""3.7"" and python_version < ""4.0"" and python_full_version >= ""3.5.0"")
+babel==2.10.1; python_version >= ""3.7""
+backcall==0.2.0; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+backports.zoneinfo==0.2.1; python_version < ""3.9"" and python_version >= ""3.6"" and (python_version >= ""3.6"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.6"")
+beartype==0.7.1; python_version >= ""3.8"" and python_version < ""4.0"" and python_full_version >= ""3.6.0""
+beautifulsoup4==4.11.1; python_full_version >= ""3.6.0"" and python_version >= ""3.7""
+black==22.1.0; python_full_version >= ""3.6.2""
+bleach==5.0.0; python_version >= ""3.7""
+bs4==0.0.1
+bt==0.2.9; (python_version >= ""2.7"" and python_full_version < ""3.0.0"") or (python_full_version >= ""3.6.0"")
+certifi==2022.5.18.1; python_full_version >= ""3.7.1"" and python_version >= ""3.8"" and python_version < ""4"" and python_full_version < ""4.0.0"" and (python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"") and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7"")
+cffi==1.15.0; python_version >= ""3.7""
+charset-normalizer==2.0.12; python_full_version >= ""3.7.1"" and python_version >= ""3.8"" and python_version < ""4.0"" and python_full_version < ""4.0.0"" and (python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"") and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7"")
+click==8.0.1; python_version >= ""3.6""
+colorama==0.4.4; python_full_version >= ""3.6.2"" and python_full_version < ""4.0.0"" and (python_version >= ""3.5"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.5.0"" and python_version >= ""3.5"") and platform_system == ""Windows"" and python_version >= ""3.8"" and (python_version >= ""3.6"" and python_full_version < ""3.0.0"" and platform_system == ""Windows"" or python_full_version >= ""3.5.0"" and platform_system == ""Windows"" and python_version >= ""3.6"") and sys_platform == ""win32""
+commonmark==0.9.1; python_full_version >= ""3.6.2"" and python_full_version < ""4.0.0""
+convertdate==2.4.0; python_version >= ""3.7"" and python_version < ""4""
+cryptography==37.0.2; python_version >= ""3.7"" and python_full_version < ""3.0.0"" and python_version < ""4.0"" or python_full_version >= ""3.6.0"" and python_version < ""4"" and python_version >= ""3.7""
+cssselect==1.1.0; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0""
+cvxpy==1.2.1; python_full_version >= ""3.6.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.7""
+cycler==0.11.0; python_version >= ""3.7""
+cython==0.29.30; python_version >= ""3.8"" and python_full_version < ""3.0.0"" and sys_platform == ""darwin"" or python_full_version >= ""3.3.0"" and sys_platform == ""darwin"" and python_version >= ""3.8""
+dateparser==1.1.1; python_version >= ""3.5""
+datetime==4.4; python_version >= ""3.5""
+debugpy==1.6.0; python_version >= ""3.7""
+decorator==5.1.1; python_full_version >= ""3.6.2"" and python_version >= ""3.8"" and (python_version >= ""3.5"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.5"")
+defusedxml==0.7.1; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.5.0"" and python_version >= ""3.7""
+degiro-connector==2.0.21; python_full_version >= ""3.7.1"" and python_full_version < ""4.0.0""
+deprecation==2.1.0
+detecta==0.0.5; python_version >= ""3.6""
+dnspython==2.2.1; python_version >= ""3.6"" and python_version < ""4.0""
+ecos==2.0.10; python_full_version >= ""3.6.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.7""
+entrypoints==0.4; python_full_version >= ""3.7.0"" and python_version >= ""3.7""
+et-xmlfile==1.1.0; python_version >= ""3.6""
+exchange-calendars==3.6.3; python_version >= ""3.7"" and python_full_version >= ""3.7.0""
+executing==0.8.3; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+fastjsonschema==2.15.3; python_full_version >= ""3.7.0"" and python_version >= ""3.7""
+ffn==0.3.6; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0""
+financedatabase==1.0.2
+finnhub-python==2.4.13
+finviz==1.4.4
+finvizfinance==0.14.1; python_version >= ""3.5""
+fonttools==4.33.3; python_version >= ""3.7""
+formulaic==0.3.4; python_full_version >= ""3.7.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.8""
+fred==3.1
+fredapi==0.4.3
+frozendict==2.3.2; python_version >= ""3.6""
+frozenlist==1.3.0; python_version >= ""3.7""
+fundamentalanalysis==0.2.14
+future==0.18.2; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0""
+gitdb==4.0.9; python_version >= ""3.7""
+gitpython==3.1.27; python_version >= ""3.7""
+grpcio==1.46.3; python_full_version >= ""3.7.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.6""
+h11==0.13.0; python_version >= ""3.7"" and python_version < ""4.0"" and python_full_version >= ""3.7.0""
+hijri-converter==2.2.4; python_version >= ""3.6""
+holidays==0.11.3.1; python_version >= ""3.6""
+html5lib==1.1; (python_version >= ""2.7"" and python_full_version < ""3.0.0"") or (python_full_version >= ""3.5.0"")
+idna==3.3; python_full_version >= ""3.7.1"" and python_version >= ""3.8"" and python_version < ""4"" and python_full_version < ""4.0.0"" and (python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"") and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7"")
+importlib-metadata==4.11.4; python_version < ""3.10"" and python_version >= ""3.7""
+inflection==0.5.1; python_version >= ""3.6""
+interface-meta==1.3.0; python_version >= ""3.8"" and python_version < ""4.0"" and python_full_version >= ""3.7.1"" and python_full_version < ""4.0.0""
+investpy==1.0.8; python_version >= ""3.7""
+ipykernel==6.13.0; python_version >= ""3.7""
+ipympl==0.8.8
+ipython-genutils==0.2.0; python_version >= ""3.7""
+ipython==8.4.0; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+ipywidgets==7.7.0
+iso8601==0.1.16
+jedi==0.18.1; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+jinja2==3.0.3; python_version >= ""3.6""
+joblib==1.1.0; python_version >= ""3.8"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.8""
+json5==0.9.8; python_version >= ""3.7""
+jsonschema==3.2.0
+jupyter-client==7.3.1; python_full_version >= ""3.7.0"" and python_version >= ""3.7""
+jupyter-console==6.4.3; python_version >= ""3.6""
+jupyter-core==4.10.0; python_full_version >= ""3.7.0"" and python_version >= ""3.7""
+jupyter-server==1.17.0; python_version >= ""3.7""
+jupyter==1.0.0
+jupyterlab-pygments==0.2.2; python_version >= ""3.7""
+jupyterlab-server==2.14.0; python_version >= ""3.7""
+jupyterlab-widgets==1.1.0; python_version >= ""3.6""
+jupyterlab==3.4.2; python_version >= ""3.7""
+kiwisolver==1.4.2; python_version >= ""3.7""
+korean-lunar-calendar==0.2.1; python_version >= ""3.7"" and python_full_version >= ""3.7.0""
+linearmodels==4.26; python_version >= ""3.8""
+lxml==4.9.0; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7""
+markupsafe==2.1.1; python_version >= ""3.7""
+matplotlib-inline==0.1.3; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+matplotlib==3.5.2; python_version >= ""3.7""
+mistune==0.8.4; python_version >= ""3.7""
+more-itertools==8.13.0; python_version >= ""3.6""
+mplfinance==0.12.9b1
+multidict==6.0.2; python_version >= ""3.7""
+multitasking==0.0.10
+mypy-extensions==0.4.3; python_version >= ""3.8"" and python_full_version >= ""3.6.2""
+mypy==0.930; python_version >= ""3.6""
+nbclassic==0.3.7; python_version >= ""3.7""
+nbclient==0.5.13; python_full_version >= ""3.7.0"" and python_version >= ""3.7""
+nbconvert==6.5.0; python_version >= ""3.7""
+nbformat==5.4.0; python_full_version >= ""3.7.0"" and python_version >= ""3.7""
+nest-asyncio==1.5.5; python_full_version >= ""3.7.0"" and python_version >= ""3.7""
+networkx==2.8.2; python_version >= ""3.8""
+notebook-shim==0.1.0; python_version >= ""3.7""
+notebook==6.4.11; python_version >= ""3.7""
+numpy==1.21.2; python_version >= ""3.7"" and python_version < ""3.11""
+oandapyv20==0.6.3
+oauthlib==3.2.0; python_version >= ""3.6"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.6""
+onetimepass==1.0.1; python_full_version >= ""3.7.1"" and python_full_version < ""4.0.0""
+openpyxl==3.0.10; python_version >= ""3.6""
+osqp==0.6.2.post5; python_full_version >= ""3.6.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.7""
+outcome==1.1.0; python_version >= ""3.7"" and python_version < ""4.0""
+packaging==21.3; python_version >= ""3.8""
+pandas-datareader==0.10.0; python_version >= ""3.6"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.6""
+pandas-market-calendars==3.2; python_full_version >= ""3.7.0""
+pandas-ta==0.3.14b
+pandas==1.4.2; python_version >= ""3.8""
+pandocfilters==1.5.0; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.7""
+papermill==2.3.4; python_version >= ""3.6""
+parso==0.8.3; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+pathspec==0.9.0; python_full_version >= ""3.6.2""
+patsy==0.5.2; python_version >= ""3.8""
+pexpect==4.8.0; sys_platform != ""win32"" and python_version >= ""3.8"" and python_full_version >= ""3.6.2""
+pickleshare==0.7.5; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+pillow==9.1.1; python_version >= ""3.7"" and python_version < ""4""
+platformdirs==2.5.2; python_version >= ""3.7"" and python_full_version >= ""3.6.2""
+plotly==5.8.0; python_version >= ""3.6""
+pmdarima==1.8.5; python_version >= ""3.7""
+praw==7.6.0; python_version >= ""3.7"" and python_version < ""4.0""
+prawcore==2.3.0; python_version >= ""3.7"" and python_version < ""4.0""
+prometheus-client==0.14.1; python_version >= ""3.7""
+prompt-toolkit==3.0.29; python_full_version >= ""3.6.2""
+property-cached==1.6.4; python_version >= ""3.8""
+protobuf==3.20.1; python_full_version >= ""3.7.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.7""
+psaw==0.0.12; python_version >= ""3""
+psutil==5.9.1; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.7""
+ptyprocess==0.7.0; os_name != ""nt"" and python_version >= ""3.8"" and sys_platform != ""win32"" and python_full_version >= ""3.6.2""
+pure-eval==0.2.2; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+py==1.11.0; implementation_name == ""pypy"" and python_version >= ""3.7"" and python_full_version >= ""3.7.0""
+pyally==1.1.2
+pycoingecko==2.2.0
+pycparser==2.21; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0""
+pyerfa==2.0.0.1; python_version >= ""3.8""
+pyex==0.5.0
+pygments==2.12.0; python_version >= ""3.6""
+pyhdfe==0.1.0; python_version >= ""3.8""
+pyluach==2.0.0; python_version >= ""3.7"" and python_full_version >= ""3.7.0""
+pymeeus==0.5.11; python_version >= ""3.7"" and python_version < ""4""
+pymongo==3.11.0; (python_version >= ""2.7"" and python_full_version < ""3.0.0"") or (python_full_version >= ""3.4.0"")
+pyobjc-core==8.5; python_version >= ""3.6"" and sys_platform == ""darwin""
+pyobjc-framework-cocoa==8.5; python_version >= ""3.6"" and sys_platform == ""darwin""
+pyopenssl==22.0.0; python_version >= ""3.7"" and python_full_version < ""3.0.0"" and python_version < ""4.0"" or python_full_version >= ""3.6.0"" and python_version < ""4"" and python_version >= ""3.7""
+pyotp==2.6.0; python_version >= ""3""
+pyparsing==3.0.9; python_full_version >= ""3.6.8"" and python_version >= ""3.7""
+pyportfolioopt==1.5.2; python_full_version >= ""3.6.1"" and python_full_version < ""4.0.0""
+pyprind==2.11.3; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0""
+pyrsistent==0.18.1; python_version >= ""3.7""
+pysocks==1.7.1; python_version >= ""3.7"" and python_full_version < ""3.0.0"" and python_version < ""4.0"" or python_full_version >= ""3.6.0"" and python_version < ""4"" and python_version >= ""3.7""
+python-binance==1.0.16
+python-coinmarketcap==0.2
+python-dateutil==2.8.2; python_full_version >= ""3.7.1"" and python_version >= ""3.8"" and python_full_version < ""4.0.0"" and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.3.0"" and python_version >= ""3.7"") and (python_version >= ""3.5"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.3.0"" and python_version >= ""3.5"")
+python-dotenv==0.19.2; python_version >= ""3.5""
+python-i18n==0.3.9
+pytrends==4.8.0
+pytz-deprecation-shim==0.1.0.post0; python_version >= ""3.6"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.6""
+pytz==2022.1; python_full_version >= ""3.7.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.8""
+pywin32==304; sys_platform == ""win32"" and platform_python_implementation != ""PyPy"" and python_version >= ""3.7"" and python_full_version >= ""3.7.0""
+pywinpty==2.0.5; os_name == ""nt"" and python_version >= ""3.7""
+pyyaml==6.0; python_version >= ""3.8""
+pyzmq==23.1.0; python_full_version >= ""3.7.0"" and python_version >= ""3.7""
+qdldl==0.1.5.post2; python_full_version >= ""3.6.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.7""
+qtconsole==5.3.0; python_version >= ""3.7""
+qtpy==2.1.0; python_version >= ""3.7""
+quandl==3.7.0; python_version >= ""3.6""
+rapidfuzz==1.9.1; python_version >= ""2.7""
+regex==2022.3.2; python_version >= ""3.6""
+reportlab==3.6.9; python_version >= ""3.7"" and python_version < ""4""
+requests-oauthlib==1.3.1; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0""
+requests==2.27.1; (python_version >= ""2.7"" and python_full_version < ""3.0.0"") or (python_full_version >= ""3.6.0"")
+rich==10.16.2; python_full_version >= ""3.6.2"" and python_full_version < ""4.0.0""
+riskfolio-lib==3.1.1; python_version >= ""3.7""
+robin-stocks==2.1.0; python_version >= ""3""
+scikit-learn==1.1.1; python_version >= ""3.8"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.8""
+scipy==1.8.1; python_version >= ""3.8"" and python_version < ""3.11"" and python_full_version >= ""3.7.1"" and python_full_version < ""4.0.0"" and (python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"") and (python_version >= ""3.8"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.8"")
+screeninfo==0.6.7
+scs==3.2.0; python_full_version >= ""3.6.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.7""
+seaborn==0.11.2; python_version >= ""3.6""
+selenium==4.2.0; python_version >= ""3.7"" and python_version < ""4.0""
+send2trash==1.8.0; python_version >= ""3.7""
+sentiment-investor==2.1.0; python_version >= ""3.8"" and python_version < ""4.0""
+setuptools-scm==6.4.2; python_version >= ""3.8""
+six==1.16.0; python_full_version >= ""3.7.1"" and python_version >= ""3.8"" and python_full_version < ""4.0.0"" and (python_version >= ""3.8"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.3.0"" and python_version >= ""3.8"") and (python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.3.0"") and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.3.0"" and python_version >= ""3.7"")
+smmap==5.0.0; python_version >= ""3.7""
+sniffio==1.2.0; python_version >= ""3.7"" and python_version < ""4.0"" and python_full_version >= ""3.6.2""
+socketio-client-nexus==0.7.6
+sortedcontainers==2.4.0; python_version >= ""3.7"" and python_version < ""4.0""
+soupsieve==2.3.2.post1; python_version >= ""3.6"" and python_full_version >= ""3.6.0""
+squarify==0.4.3
+sseclient==0.0.27
+stack-data==0.2.0; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+statsmodels==0.13.2; python_version >= ""3.7""
+tabulate==0.8.9; python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0""
+temporal-cache==0.1.4
+tenacity==8.0.1; python_version >= ""3.6""
+terminado==0.15.0; python_version >= ""3.7""
+textwrap3==0.9.2; python_version >= ""3.6""
+thepassiveinvestor==1.0.10
+threadpoolctl==3.1.0; python_version >= ""3.8"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.8""
+tinycss2==1.1.1; python_version >= ""3.7""
+tomli==2.0.1; python_version >= ""3.8"" and python_full_version >= ""3.6.2""
+toolz==0.11.2; python_version >= ""3.7"" and python_full_version >= ""3.7.0""
+tornado==6.1; python_full_version >= ""3.7.0"" and python_version >= ""3.7""
+tqdm==4.64.0; python_version >= ""3.6"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.4.0"" and python_version >= ""3.6""
+tradingview-ta==3.2.10; python_version >= ""3.6""
+traitlets==5.2.2.post1; python_full_version >= ""3.7.0"" and python_version >= ""3.8""
+trio-websocket==0.9.2; python_version >= ""3.7"" and python_version < ""4.0""
+trio==0.20.0; python_version >= ""3.7"" and python_version < ""4.0""
+typing-extensions==4.2.0; python_version < ""3.10"" and python_full_version >= ""3.6.2"" and python_version >= ""3.7""
+tzdata==2022.1; platform_system == ""Windows"" and python_version >= ""3.6"" and (python_version >= ""3.6"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.6"")
+tzlocal==4.2; python_version >= ""3.6""
+ujson==5.3.0; python_version >= ""3.7""
+unidecode==1.3.4; python_version >= ""3.7""
+update-checker==0.18.0; python_version >= ""3.7"" and python_version < ""4.0""
+urllib3==1.26.9; python_full_version >= ""3.7.1"" and python_version < ""4"" and python_version >= ""3.8"" and python_full_version < ""4.0.0"" and (python_version >= ""2.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"") and (python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.6.0"" and python_version >= ""3.7"")
+user-agent==0.1.10
+vadersentiment==3.3.2
+valinvest==0.0.2; python_version >= ""3.6""
+voila==0.3.5; python_version >= ""3.7""
+wcwidth==0.2.5; python_full_version >= ""3.6.2"" and python_version >= ""3.8""
+webencodings==0.5.1; python_version >= ""3.7"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.5.0"" and python_version >= ""3.7""
+websocket-client==1.3.2; python_version >= ""3.8"" and python_version < ""4.0""
+websockets==10.3; python_version >= ""3.7""
+widgetsnbextension==3.6.0
+wrapt==1.14.1; python_full_version >= ""3.7.1"" and python_full_version < ""4.0.0"" and python_version >= ""3.8""
+wsproto==1.1.0; python_version >= ""3.7"" and python_version < ""4.0"" and python_full_version >= ""3.7.0""
+xlsxwriter==3.0.3; python_version >= ""3.7""
+yarl==1.7.2; python_version >= ""3.6""
+yfinance==0.1.70
+zipp==3.8.0; python_version < ""3.10"" and python_version >= ""3.7""
+zope.interface==5.4.0; python_version >= ""3.5"" and python_full_version < ""3.0.0"" or python_full_version >= ""3.5.0"" and python_version >= ""3.5""
+"
+https://github.com/flairNLP/flair,machine-learning,"python-dateutil>=2.6.1
+torch>=1.5.0,!=1.8
+gensim>=3.4.0
+tqdm>=4.26.0
+segtok>=1.5.7
+matplotlib>=2.2.3
+mpld3==0.3
+scikit-learn>=0.21.3
+sqlitedict>=1.6.0
+deprecated>=1.2.4
+hyperopt>=0.2.7
+transformers>=4.0.0
+bpemb>=0.3.2
+regex
+tabulate
+langdetect
+lxml
+ftfy
+sentencepiece==0.1.95
+konoha<5.0.0,>=4.0.0
+janome
+gdown==4.4.0
+huggingface-hub
+conllu>=4.0
+more-itertools
+wikipedia-api
+pptree
+"
+https://github.com/ddbourgin/numpy-ml,machine-learning,"numpy
+scipy
+"
+https://github.com/EpistasisLab/tpot,machine-learning,"deap>=1.2
+nose==1.3.7
+numpy>=1.16.3
+scikit-learn>=0.22.0
+imbalanced-learn>=0.7.0
+scipy>=1.3.1
+tqdm>=4.36.1
+update-checker>=0.16
+stopit>=1.1.2
+pandas>=0.24.2
+joblib>=0.13.2
+xgboost>=1.1.0
+"
+https://github.com/mindsdb/mindsdb,machine-learning,"lightwood >= 22.6.1.2, < 22.6.2.0
+markupsafe == 2.0.1
+flask-restx >= 0.2.0
+flask >= 1.0, < 2.0
+python-multipart >= 0.0.5
+pyparsing == 2.3.1
+cryptography >= 2.9.2, < 3.4
+psycopg[binary] >= 1.15.3
+python-tds >= 1.10.0
+waitress >= 1.4.4
+pymongo[tls, srv] >= 3.10.1
+setuptools
+psutil
+sqlalchemy >= 1.3.0
+alembic >= 1.3.3
+sentry-sdk
+walrus==0.8.2
+flask-compress >= 1.0.0
+kafka-python >= 2.0.0
+appdirs >= 1.0.0
+mindsdb-sql >= 0.3.5, < 0.4.0
+checksumdir >= 1.2.0
+mindsdb-streams == 0.0.5
+duckdb == 0.3.1
+requests >= 2.0.0"
+https://github.com/kedro-org/kedro,machine-learning,"anyconfig~=0.10.0
+cachetools~=4.1
+click<9.0
+cookiecutter>=2.1.1, <3.0
+dynaconf>=3.1.2, <4.0
+fsspec>=2021.4, <=2022.1
+gitpython~=3.0
+importlib_metadata>=3.6  # The ""selectable"" entry points were introduced in `importlib_metadata` 3.6 and Python 3.10.
+jmespath>=0.9.5, <1.0
+pip-tools~=6.5
+pluggy~=1.0.0
+python-json-logger~=2.0
+PyYAML>=4.2, <7.0
+rich~=12.0
+rope~=0.21.0  # subject to LGPLv3 license
+setuptools>=38.0
+toml~=0.10
+toposort~=1.5  # Needs to be at least 1.5 to be able to raise CircularDependencyError
+"
+https://github.com/OlafenwaMoses/ImageAI,machine-learning,"tensorflow==2.4.0
+keras==2.4.3
+numpy==1.19.3
+pillow==8.1.1
+scipy==1.4.1
+h5py==2.10.0
+matplotlib==3.3.2
+opencv-python
+keras-resnet==0.2.0
+"
+https://github.com/drivendata/cookiecutter-data-science,machine-learning,"mkdocs
+mkdocs-cinder
+cookiecutter
+pytest
+"
+https://github.com/lmcinnes/umap,machine-learning,"numpy>=1.17
+scipy>=1.3.1
+scikit-learn>=0.22
+numba>=0.51.2
+pynndescent>=0.5
+tbb>=2019.0
+tqdm
+"
+https://github.com/snorkel-team/snorkel,machine-learning,"# Library dependencies for Python code.  You need to install these with
+# `pip install -r requirements.txt` or
+# `conda install --file requirements.txt`
+# to ensure that you can use all Snorkel code.
+# NOTE: all essential packages must be placed under a section named
+# '#### ESSENTIAL ...' so that the script `./scripts/check_requirements.py`
+# can find them.
+
+#### ESSENTIAL LIBRARIES
+
+# General scientific computing
+
+numpy>=1.16.5,<=1.22.3
+scipy>=1.2.0,<2.0.0
+
+# Data storage and function application
+pandas>=1.0.0,<2.0.0
+tqdm>=4.33.0,<5.0.0
+
+# Internal models
+scikit-learn>=0.20.2,<1.1
+torch>=1.2.0,<2.0.0
+munkres>=1.0.6
+
+# LF dependency learning
+networkx>=2.2,<2.7
+
+# Model introspection tools
+tensorboard>=2.0.0,<2.7.0
+
+#### EXTRA/TEST LIBRARIES
+
+# spaCy (NLP)
+spacy>=2.1.0,<3.0.0
+blis>=0.3.0,<=0.7.7
+
+# Dask (parallelism)
+dask[dataframe]>=2020.12.0,<2022.04.1
+distributed>=2020.12.0,<2022.04.1
+
+# Dill (serialization)
+dill>=0.3.0,<0.4.0
+
+
+#### DEV TOOLS
+
+black>=22.3
+flake8>=3.7.0,<4.0.0
+isort>=4.3.0,<5.0.0
+mypy==0.931
+pydocstyle>=4.0.0,<5.0.0
+pytest>=5.0.0,<6.0.0
+pytest-cov>=2.7.0,<3.0.0
+pytest-doctestplus>=0.3.0,<0.4.0
+tox>=3.13.0,<4.0.0
+"
